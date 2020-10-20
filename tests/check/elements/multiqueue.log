@@ -1,0 +1,5 @@
+FIXME: skipping test test_output_order because it's broken
+Running suite(s): multiqueue
+100%: Checks: 15, Failures: 0, Errors: 0
+Check suite multiqueue ran in 1.792s (tests failed: 0)
+PASS elements/multiqueue (exit status: 0)

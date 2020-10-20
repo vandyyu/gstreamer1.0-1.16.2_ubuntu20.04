@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<refentry id="gstreamer-GstStream">
+<refmeta>
+<refentrytitle role="top_of_page" id="gstreamer-GstStream.top_of_page">GstStreams</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstStreams</refname>
+<refpurpose>Base class for stream objects</refpurpose>
+</refnamediv>
+
+<refsect1 id="gstreamer-GstStream.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstStream"><returnvalue>GstStream</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-stream-new">gst_stream_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-stream-get-caps">gst_stream_get_caps</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstStreamFlags"><returnvalue>GstStreamFlags</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-stream-get-stream-flags">gst_stream_get_stream_flags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-stream-get-stream-id">gst_stream_get_stream_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstStreamType"><returnvalue>GstStreamType</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-stream-get-stream-type">gst_stream_get_stream_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstTagList"><returnvalue>GstTagList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-stream-get-tags">gst_stream_get_tags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-stream-set-caps">gst_stream_set_caps</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-stream-set-stream-flags">gst_stream_set_stream_flags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-stream-set-stream-type">gst_stream_set_stream_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-stream-set-tags">gst_stream_set_tags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-stream-type-get-name">gst_stream_type_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gstreamer-GstStream.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstStream">GstStream</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstStreamClass">GstStreamClass</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstStreamType">GstStreamType</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gstreamer-GstStream.includes"><title>Includes</title><synopsis>#include &lt;gst/gst.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gstreamer-GstStream.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A <link linkend="GstStream"><type>GstStream</type></link> is a high-level object defining a stream of data which is, or
+can be, present in a <link linkend="GstPipeline"><type>GstPipeline</type></link>.</para>
+<para>It is defined by a unique identifier, a "Stream ID". A <link linkend="GstStream"><type>GstStream</type></link> does not
+automatically imply the stream is present within a pipeline or element.</para>
+<para>Any element that can introduce new streams in a pipeline should create the
+appropriate <link linkend="GstStream"><type>GstStream</type></link> object, and can convey that object via the
+<link linkend="GST-EVENT-STREAM-START:CAPS"><literal>GST_EVENT_STREAM_START</literal></link> event and/or the <link linkend="GstStreamCollection"><type>GstStreamCollection</type></link>.</para>
+<para>Elements that do not modify the nature of the stream can add extra information
+on it (such as enrich the <link linkend="GstCaps"><type>GstCaps</type></link>, or <link linkend="GstTagList"><type>GstTagList</type></link>). This is typically done
+by parsing elements.</para>
+
+</refsect1>
+<refsect1 id="gstreamer-GstStream.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-stream-new" role="function" condition="since:1.10">
+<title>gst_stream_new&#160;()</title>
+<indexterm zone="gst-stream-new" role="1.10"><primary>gst_stream_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstStream"><returnvalue>GstStream</returnvalue></link>&#160;*
+gst_stream_new (<parameter>const <link linkend="gchar"><type>gchar</type></link> *stream_id</parameter>,
+                <parameter><link linkend="GstCaps"><type>GstCaps</type></link> *caps</parameter>,
+                <parameter><link linkend="GstStreamType"><type>GstStreamType</type></link> type</parameter>,
+                <parameter><link linkend="GstStreamFlags"><type>GstStreamFlags</type></link> flags</parameter>);</programlisting>
+<para>Create a new <link linkend="GstStream"><type>GstStream</type></link> for the given <parameter>stream_id</parameter>
+, <parameter>caps</parameter>
+, <parameter>type</parameter>
+
+and <parameter>flags</parameter>
+</para>
+<refsect3 id="gst-stream-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream_id</para></entry>
+<entry role="parameter_description"><para>the id for the new stream. If <link linkend="NULL:CAPS"><literal>NULL</literal></link>,
+a new one will be automatically generated. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>caps</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstCaps"><type>GstCaps</type></link> of the stream. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>][<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstStreamType"><type>GstStreamType</type></link> of the stream</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstStreamFlags"><type>GstStreamFlags</type></link> of the stream</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-new.returns" role="returns">
+<title>Returns</title>
+<para>The new <link linkend="GstStream"><type>GstStream</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-get-caps" role="function" condition="since:1.10">
+<title>gst_stream_get_caps&#160;()</title>
+<indexterm zone="gst-stream-get-caps" role="1.10"><primary>gst_stream_get_caps</primary></indexterm>
+<programlisting language="C"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>&#160;*
+gst_stream_get_caps (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>);</programlisting>
+<para>Retrieve the caps for <parameter>stream</parameter>
+, if any</para>
+<refsect3 id="gst-stream-get-caps.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-get-caps.returns" role="returns">
+<title>Returns</title>
+<para>The <link linkend="GstCaps"><type>GstCaps</type></link> for <parameter>stream</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>nullable</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-get-stream-flags" role="function" condition="since:1.10">
+<title>gst_stream_get_stream_flags&#160;()</title>
+<indexterm zone="gst-stream-get-stream-flags" role="1.10"><primary>gst_stream_get_stream_flags</primary></indexterm>
+<programlisting language="C"><link linkend="GstStreamFlags"><returnvalue>GstStreamFlags</returnvalue></link>
+gst_stream_get_stream_flags (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>);</programlisting>
+<para>Retrieve the current stream flags for <parameter>stream</parameter>
+</para>
+<refsect3 id="gst-stream-get-stream-flags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-get-stream-flags.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstStreamFlags"><type>GstStreamFlags</type></link> for <parameter>stream</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-get-stream-id" role="function" condition="since:1.10">
+<title>gst_stream_get_stream_id&#160;()</title>
+<indexterm zone="gst-stream-get-stream-id" role="1.10"><primary>gst_stream_get_stream_id</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_stream_get_stream_id (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>);</programlisting>
+<para>Returns the stream ID of <parameter>stream</parameter>
+.</para>
+<refsect3 id="gst-stream-get-stream-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-get-stream-id.returns" role="returns">
+<title>Returns</title>
+<para>the stream ID of <parameter>stream</parameter>
+. Only valid
+during the lifetime of <parameter>stream</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>nullable</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-get-stream-type" role="function" condition="since:1.10">
+<title>gst_stream_get_stream_type&#160;()</title>
+<indexterm zone="gst-stream-get-stream-type" role="1.10"><primary>gst_stream_get_stream_type</primary></indexterm>
+<programlisting language="C"><link linkend="GstStreamType"><returnvalue>GstStreamType</returnvalue></link>
+gst_stream_get_stream_type (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>);</programlisting>
+<para>Retrieve the stream type for <parameter>stream</parameter>
+</para>
+<refsect3 id="gst-stream-get-stream-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-get-stream-type.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstStreamType"><type>GstStreamType</type></link> for <parameter>stream</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-get-tags" role="function" condition="since:1.10">
+<title>gst_stream_get_tags&#160;()</title>
+<indexterm zone="gst-stream-get-tags" role="1.10"><primary>gst_stream_get_tags</primary></indexterm>
+<programlisting language="C"><link linkend="GstTagList"><returnvalue>GstTagList</returnvalue></link>&#160;*
+gst_stream_get_tags (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>);</programlisting>
+<para>Retrieve the tags for <parameter>stream</parameter>
+, if any</para>
+<refsect3 id="gst-stream-get-tags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-get-tags.returns" role="returns">
+<title>Returns</title>
+<para>The <link linkend="GstTagList"><type>GstTagList</type></link> for <parameter>stream</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>nullable</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-set-caps" role="function" condition="since:1.10">
+<title>gst_stream_set_caps&#160;()</title>
+<indexterm zone="gst-stream-set-caps" role="1.10"><primary>gst_stream_set_caps</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_stream_set_caps (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>,
+                     <parameter><link linkend="GstCaps"><type>GstCaps</type></link> *caps</parameter>);</programlisting>
+<para>Set the caps for the <link linkend="GstStream"><type>GstStream</type></link></para>
+<refsect3 id="gst-stream-set-caps.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>caps</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstCaps"><type>GstCaps</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-set-stream-flags" role="function" condition="since:1.10">
+<title>gst_stream_set_stream_flags&#160;()</title>
+<indexterm zone="gst-stream-set-stream-flags" role="1.10"><primary>gst_stream_set_stream_flags</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_stream_set_stream_flags (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>,
+                             <parameter><link linkend="GstStreamFlags"><type>GstStreamFlags</type></link> flags</parameter>);</programlisting>
+<para>Set the <parameter>flags</parameter>
+ for the <parameter>stream</parameter>
+.</para>
+<refsect3 id="gst-stream-set-stream-flags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>the flags to set on <parameter>stream</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-set-stream-type" role="function" condition="since:1.10">
+<title>gst_stream_set_stream_type&#160;()</title>
+<indexterm zone="gst-stream-set-stream-type" role="1.10"><primary>gst_stream_set_stream_type</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_stream_set_stream_type (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>,
+                            <parameter><link linkend="GstStreamType"><type>GstStreamType</type></link> stream_type</parameter>);</programlisting>
+<para>Set the stream type of <parameter>stream</parameter>
+</para>
+<refsect3 id="gst-stream-set-stream-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stream_type</para></entry>
+<entry role="parameter_description"><para>the type to set on <parameter>stream</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-set-tags" role="function" condition="since:1.10">
+<title>gst_stream_set_tags&#160;()</title>
+<indexterm zone="gst-stream-set-tags" role="1.10"><primary>gst_stream_set_tags</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_stream_set_tags (<parameter><link linkend="GstStream"><type>GstStream</type></link> *stream</parameter>,
+                     <parameter><link linkend="GstTagList"><type>GstTagList</type></link> *tags</parameter>);</programlisting>
+<para>Set the tags for the <link linkend="GstStream"><type>GstStream</type></link></para>
+<refsect3 id="gst-stream-set-tags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tags</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstTagList"><type>GstTagList</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-stream-type-get-name" role="function" condition="since:1.10">
+<title>gst_stream_type_get_name&#160;()</title>
+<indexterm zone="gst-stream-type-get-name" role="1.10"><primary>gst_stream_type_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_stream_type_get_name (<parameter><link linkend="GstStreamType"><type>GstStreamType</type></link> stype</parameter>);</programlisting>
+<para>Get a descriptive string for a given <link linkend="GstStreamType"><type>GstStreamType</type></link></para>
+<refsect3 id="gst-stream-type-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stype</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStreamType"><type>GstStreamType</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-stream-type-get-name.returns" role="returns">
+<title>Returns</title>
+<para>A string describing the stream type. </para>
+<para><emphasis role="annotation">[<acronym>nullable</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gstreamer-GstStream.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstStream" role="struct" condition="since:1.10">
+<title>struct GstStream</title>
+<indexterm zone="GstStream" role="1.10"><primary>GstStream</primary></indexterm>
+<programlisting language="C">struct GstStream {
+  const gchar *stream_id;
+};
+</programlisting>
+<para>A high-level object representing a single stream. It might be backed, or
+not, by an actual flow of data in a pipeline (<link linkend="GstPad"><type>GstPad</type></link>).</para>
+<para>A <link linkend="GstStream"><type>GstStream</type></link> does not care about data changes (such as decoding, encoding,
+parsing,...) as long as the underlying data flow corresponds to the same
+high-level flow (ex: a certain audio track).</para>
+<para>A <link linkend="GstStream"><type>GstStream</type></link> contains all the information pertinent to a stream, such as
+stream-id, tags, caps, type, ...</para>
+<para>Elements can subclass a <link linkend="GstStream"><type>GstStream</type></link> for internal usage (to contain information
+pertinent to streams of data).</para>
+<refsect3 id="GstStream.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para>const&#160;<link linkend="gchar"><type>gchar</type></link>&#160;*<structfield id="GstStream.stream-id">stream_id</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The Stream Identifier for this <link linkend="GstStream"><type>GstStream</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="GstStreamClass" role="struct">
+<title>struct GstStreamClass</title>
+<indexterm zone="GstStreamClass"><primary>GstStreamClass</primary></indexterm>
+<programlisting language="C">struct GstStreamClass {
+  GstObjectClass parent_class;
+};
+</programlisting>
+<para>GstStream class structure</para>
+<refsect3 id="GstStreamClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstStreamType" role="enum" condition="since:1.10">
+<title>enum GstStreamType</title>
+<indexterm zone="GstStreamType" role="1.10"><primary>GstStreamType</primary></indexterm>
+<para><link linkend="GstStreamType"><type>GstStreamType</type></link> describes a high level classification set for
+flows of data in <link linkend="GstStream"><type>GstStream</type></link> objects.</para>
+<para>Note that this is a flag, and therefore users should not assume it
+will be a single value. Do not use the equality operator for checking
+whether a stream is of a certain type.</para>
+<refsect3 id="GstStreamType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-STREAM-TYPE-UNKNOWN:CAPS">GST_STREAM_TYPE_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>The stream is of unknown (unclassified) type.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-STREAM-TYPE-AUDIO:CAPS">GST_STREAM_TYPE_AUDIO</para></entry>
+<entry role="enum_member_description"><para>The stream is of audio data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-STREAM-TYPE-VIDEO:CAPS">GST_STREAM_TYPE_VIDEO</para></entry>
+<entry role="enum_member_description"><para>The stream carries video data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-STREAM-TYPE-CONTAINER:CAPS">GST_STREAM_TYPE_CONTAINER</para></entry>
+<entry role="enum_member_description"><para>The stream is a muxed container type</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-STREAM-TYPE-TEXT:CAPS">GST_STREAM_TYPE_TEXT</para></entry>
+<entry role="enum_member_description"><para>The stream contains subtitle / subpicture data.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

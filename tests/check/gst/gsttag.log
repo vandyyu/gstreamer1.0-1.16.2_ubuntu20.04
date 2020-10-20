@@ -1,0 +1,4 @@
+Running suite(s): GstTag
+100%: Checks: 14, Failures: 0, Errors: 0
+Check suite gst_tag ran in 0.013s (tests failed: 0)
+PASS gst/gsttag (exit status: 0)

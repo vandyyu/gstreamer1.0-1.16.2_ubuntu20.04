@@ -1,0 +1,4 @@
+Running suite(s): GstBin
+100%: Checks: 24, Failures: 0, Errors: 0
+Check suite gst_bin ran in 4.062s (tests failed: 0)
+PASS gst/gstbin (exit status: 0)

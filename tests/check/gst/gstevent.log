@@ -1,0 +1,4 @@
+Running suite(s): GstEvent
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite gst_event ran in 2.137s (tests failed: 0)
+PASS gst/gstevent (exit status: 0)

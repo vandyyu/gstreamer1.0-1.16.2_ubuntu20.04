@@ -1,0 +1,4 @@
+Running suite(s): GstQueueArray
+100%: Checks: 9, Failures: 0, Errors: 0
+Check suite gst_queue_array ran in 0.012s (tests failed: 0)
+PASS libs/queuearray (exit status: 0)

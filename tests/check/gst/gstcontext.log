@@ -1,0 +1,4 @@
+Running suite(s): GstContext
+100%: Checks: 7, Failures: 0, Errors: 0
+Check suite gst_context ran in 0.005s (tests failed: 0)
+PASS gst/gstcontext (exit status: 0)

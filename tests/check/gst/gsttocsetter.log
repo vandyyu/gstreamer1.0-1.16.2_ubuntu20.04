@@ -1,0 +1,4 @@
+Running suite(s): GstTocSetter
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite gst_toc_setter ran in 1.502s (tests failed: 0)
+PASS gst/gsttocsetter (exit status: 0)

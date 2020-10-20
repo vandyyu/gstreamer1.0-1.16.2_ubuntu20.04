@@ -1,0 +1,4 @@
+Running suite(s): GstNetTimeProvider
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite gst_net_time_provider ran in 0.002s (tests failed: 0)
+PASS libs/gstnettimeprovider (exit status: 0)

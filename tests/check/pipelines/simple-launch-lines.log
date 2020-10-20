@@ -1,0 +1,4 @@
+Running suite(s): Pipelines
+100%: Checks: 4, Failures: 0, Errors: 0
+Check suite simple_launch_lines ran in 1.513s (tests failed: 0)
+PASS pipelines/simple-launch-lines (exit status: 0)

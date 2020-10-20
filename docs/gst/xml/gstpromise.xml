@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<refentry id="GstPromise">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstPromise.top_of_page">GstPromise</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstPromise</refname>
+<refpurpose>a miniobject for future/promise-like functionality</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstPromise.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstPromiseChangeFunc">*GstPromiseChangeFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPromise"><returnvalue>GstPromise</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-promise-new">gst_promise_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPromise"><returnvalue>GstPromise</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-promise-new-with-change-func">gst_promise_new_with_change_func</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPromise"><returnvalue>GstPromise</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-promise-ref">gst_promise_ref</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-promise-unref">gst_promise_unref</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPromiseResult"><returnvalue>GstPromiseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-promise-wait">gst_promise_wait</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-promise-reply">gst_promise_reply</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-promise-interrupt">gst_promise_interrupt</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-promise-expire">gst_promise_expire</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstStructure"><returnvalue>GstStructure</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-promise-get-reply">gst_promise_get_reply</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstPromise.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPromiseResult">GstPromiseResult</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstPromise-struct">GstPromise</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstPromise.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstPromise
+</screen>
+</refsect1>
+
+<refsect1 id="GstPromise.includes"><title>Includes</title><synopsis>#include &lt;gst/gst.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="GstPromise.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The <link linkend="GstPromise"><type>GstPromise</type></link> object implements the container for values that may
+be available later. i.e. a Future or a Promise in</para>
+<ulink url="https://en.wikipedia.org/wiki/Futures_and_promises">https://en.wikipedia.org/wiki/Futures_and_promises</ulink>
+<para>As with all Future/Promise-like functionality, there is the concept of the
+producer of the value and the consumer of the value.</para>
+<para>A <link linkend="GstPromise"><type>GstPromise</type></link> is created with <link linkend="gst-promise-new"><function>gst_promise_new()</function></link> by the consumer and passed
+to the producer to avoid thread safety issues with the change callback.
+A <link linkend="GstPromise"><type>GstPromise</type></link> can be replied to with a value (or an error) by the producer
+with <link linkend="gst-promise-reply"><function>gst_promise_reply()</function></link>. <link linkend="gst-promise-interrupt"><function>gst_promise_interrupt()</function></link> is for the consumer to
+indicate to the producer that the value is not needed anymore and producing
+that value can stop.  The <parameter>GST_PROMISE_RESULT_EXPIRED</parameter>
+ state set by a call
+to <link linkend="gst-promise-expire"><function>gst_promise_expire()</function></link> indicates to the consumer that a value will never
+be produced and is intended to be called by a third party that implements
+some notion of message handling such as <link linkend="GstBus"><type>GstBus</type></link>.
+A callback can also be installed at <link linkend="GstPromise"><type>GstPromise</type></link> creation for
+result changes with <link linkend="gst-promise-new-with-change-func"><function>gst_promise_new_with_change_func()</function></link>.
+The change callback can be used to chain <link linkend="GstPromises"><type>GstPromises</type></link>'s together as in the
+following example.</para>
+<informalexample><programlisting role="example" language="C"><![CDATA[
+const GstStructure *reply;
+GstPromise *p;
+if (gst_promise_wait (promise) != GST_PROMISE_RESULT_REPLIED)
+  return; // interrupted or expired value
+reply = gst_promise_get_reply (promise);
+if (error in reply)
+  return; // propagate error
+p = gst_promise_new_with_change_func (another_promise_change_func, user_data, notify);
+pass p to promise-using API
+]]></programlisting></informalexample>
+<para></para>
+<para>Each <link linkend="GstPromise"><type>GstPromise</type></link> starts out with a <link linkend="GstPromiseResult"><type>GstPromiseResult</type></link> of
+<link linkend="GST-PROMISE-RESULT-PENDING:CAPS"><literal>GST_PROMISE_RESULT_PENDING</literal></link> and only ever transitions once
+into one of the other <link linkend="GstPromiseResult"><type>GstPromiseResult</type></link>'s.</para>
+<para>In order to support multi-threaded code, <link linkend="gst-promise-reply"><function>gst_promise_reply()</function></link>,
+<link linkend="gst-promise-interrupt"><function>gst_promise_interrupt()</function></link> and <link linkend="gst-promise-expire"><function>gst_promise_expire()</function></link> may all be from
+different threads with some restrictions and the final result of the promise
+is whichever call is made first.  There are two restrictions on ordering:</para>
+<orderedlist>
+<listitem><para>That <link linkend="gst-promise-reply"><function>gst_promise_reply()</function></link> and <link linkend="gst-promise-interrupt"><function>gst_promise_interrupt()</function></link> cannot be called
+after <link linkend="gst-promise-expire"><function>gst_promise_expire()</function></link></para></listitem>
+<listitem>
+<para>That <link linkend="gst-promise-reply"><function>gst_promise_reply()</function></link> and <link linkend="gst-promise-interrupt"><function>gst_promise_interrupt()</function></link>
+cannot be called twice.</para>
+</listitem>
+</orderedlist>
+<para>The change function set with <link linkend="gst-promise-new-with-change-func"><function>gst_promise_new_with_change_func()</function></link> is
+called directly from either the <link linkend="gst-promise-reply"><function>gst_promise_reply()</function></link>,
+<link linkend="gst-promise-interrupt"><function>gst_promise_interrupt()</function></link> or <link linkend="gst-promise-expire"><function>gst_promise_expire()</function></link> and can be called
+from an arbitrary thread.  <link linkend="GstPromise"><type>GstPromise</type></link> using APIs can restrict this to
+a single thread or a subset of threads but that is entirely up to the API
+that uses <link linkend="GstPromise"><type>GstPromise</type></link>.</para>
+
+</refsect1>
+<refsect1 id="GstPromise.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GstPromiseChangeFunc" role="function" condition="since:1.14">
+<title>GstPromiseChangeFunc&#160;()</title>
+<indexterm zone="GstPromiseChangeFunc" role="1.14"><primary>GstPromiseChangeFunc</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstPromiseChangeFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>,
+                         <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<refsect3 id="GstPromiseChangeFunc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-new" role="function" condition="since:1.14">
+<title>gst_promise_new&#160;()</title>
+<indexterm zone="gst-promise-new" role="1.14"><primary>gst_promise_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstPromise"><returnvalue>GstPromise</returnvalue></link>&#160;*
+gst_promise_new (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="gst-promise-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstPromise"><type>GstPromise</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-new-with-change-func" role="function" condition="since:1.14">
+<title>gst_promise_new_with_change_func&#160;()</title>
+<indexterm zone="gst-promise-new-with-change-func" role="1.14"><primary>gst_promise_new_with_change_func</primary></indexterm>
+<programlisting language="C"><link linkend="GstPromise"><returnvalue>GstPromise</returnvalue></link>&#160;*
+gst_promise_new_with_change_func (<parameter><link linkend="GstPromiseChangeFunc"><type>GstPromiseChangeFunc</type></link> func</parameter>,
+                                  <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                                  <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<para><parameter>func</parameter>
+ will be called exactly once when transitioning out of
+<link linkend="GST-PROMISE-RESULT-PENDING:CAPS"><literal>GST_PROMISE_RESULT_PENDING</literal></link> into any of the other <link linkend="GstPromiseResult"><type>GstPromiseResult</type></link>
+states.</para>
+<refsect3 id="gst-promise-new-with-change-func.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>func</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromiseChangeFunc"><type>GstPromiseChangeFunc</type></link> to call. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope notified</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>argument to call <parameter>func</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para>notification function that <parameter>user_data</parameter>
+is no longer needed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-promise-new-with-change-func.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstPromise"><type>GstPromise</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-ref" role="function" condition="since:1.14">
+<title>gst_promise_ref&#160;()</title>
+<indexterm zone="gst-promise-ref" role="1.14"><primary>gst_promise_ref</primary></indexterm>
+<programlisting language="C"><link linkend="GstPromise"><returnvalue>GstPromise</returnvalue></link>&#160;*
+gst_promise_ref (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>);</programlisting>
+<para>Increases the refcount of the given <parameter>promise</parameter>
+ by one.</para>
+<refsect3 id="gst-promise-ref.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link>.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-promise-ref.returns" role="returns">
+<title>Returns</title>
+<para><parameter>promise</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-unref" role="function" condition="since:1.14">
+<title>gst_promise_unref&#160;()</title>
+<indexterm zone="gst-promise-unref" role="1.14"><primary>gst_promise_unref</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_promise_unref (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>);</programlisting>
+<para>Decreases the refcount of the promise. If the refcount reaches 0, the
+promise will be freed.</para>
+<refsect3 id="gst-promise-unref.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-wait" role="function" condition="since:1.14">
+<title>gst_promise_wait&#160;()</title>
+<indexterm zone="gst-promise-wait" role="1.14"><primary>gst_promise_wait</primary></indexterm>
+<programlisting language="C"><link linkend="GstPromiseResult"><returnvalue>GstPromiseResult</returnvalue></link>
+gst_promise_wait (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>);</programlisting>
+<para>Wait for <parameter>promise</parameter>
+ to move out of the <link linkend="GST-PROMISE-RESULT-PENDING:CAPS"><literal>GST_PROMISE_RESULT_PENDING</literal></link> state.
+If <parameter>promise</parameter>
+ is not in <link linkend="GST-PROMISE-RESULT-PENDING:CAPS"><literal>GST_PROMISE_RESULT_PENDING</literal></link> then it will return
+immediately with the current result.</para>
+<refsect3 id="gst-promise-wait.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-promise-wait.returns" role="returns">
+<title>Returns</title>
+<para> the result of the promise</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-reply" role="function" condition="since:1.14">
+<title>gst_promise_reply&#160;()</title>
+<indexterm zone="gst-promise-reply" role="1.14"><primary>gst_promise_reply</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_promise_reply (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>,
+                   <parameter><link linkend="GstStructure"><type>GstStructure</type></link> *s</parameter>);</programlisting>
+<para>Set a reply on <parameter>promise</parameter>
+.  This will wake up any waiters with
+<link linkend="GST-PROMISE-RESULT-REPLIED:CAPS"><literal>GST_PROMISE_RESULT_REPLIED</literal></link>.  Called by the producer of the value to
+indicate success (or failure).</para>
+<para>If <parameter>promise</parameter>
+ has already been interrupted by the consumer, then this reply
+is not visible to the consumer.</para>
+<refsect3 id="gst-promise-reply.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>s</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstStructure"><type>GstStructure</type></link> with the the reply contents. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-interrupt" role="function" condition="since:1.14">
+<title>gst_promise_interrupt&#160;()</title>
+<indexterm zone="gst-promise-interrupt" role="1.14"><primary>gst_promise_interrupt</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_promise_interrupt (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>);</programlisting>
+<para>Interrupt waiting for a <parameter>promise</parameter>
+.  This will wake up any waiters with
+<link linkend="GST-PROMISE-RESULT-INTERRUPTED:CAPS"><literal>GST_PROMISE_RESULT_INTERRUPTED</literal></link>.  Called when the consumer does not want
+the value produced anymore.</para>
+<refsect3 id="gst-promise-interrupt.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-expire" role="function" condition="since:1.14">
+<title>gst_promise_expire&#160;()</title>
+<indexterm zone="gst-promise-expire" role="1.14"><primary>gst_promise_expire</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_promise_expire (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>);</programlisting>
+<para>Expire a <parameter>promise</parameter>
+.  This will wake up any waiters with
+<link linkend="GST-PROMISE-RESULT-EXPIRED:CAPS"><literal>GST_PROMISE_RESULT_EXPIRED</literal></link>.  Called by a message loop when the parent
+message is handled and/or destroyed (possibly unanswered).</para>
+<refsect3 id="gst-promise-expire.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="gst-promise-get-reply" role="function" condition="since:1.14">
+<title>gst_promise_get_reply&#160;()</title>
+<indexterm zone="gst-promise-get-reply" role="1.14"><primary>gst_promise_get_reply</primary></indexterm>
+<programlisting language="C">const <link linkend="GstStructure"><returnvalue>GstStructure</returnvalue></link>&#160;*
+gst_promise_get_reply (<parameter><link linkend="GstPromise"><type>GstPromise</type></link> *promise</parameter>);</programlisting>
+<para>Retrieve the reply set on <parameter>promise</parameter>
+.  <parameter>promise</parameter>
+ must be in
+<link linkend="GST-PROMISE-RESULT-REPLIED:CAPS"><literal>GST_PROMISE_RESULT_REPLIED</literal></link> and the returned structure is owned by <parameter>promise</parameter>
+</para>
+<refsect3 id="gst-promise-get-reply.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>promise</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPromise"><type>GstPromise</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-promise-get-reply.returns" role="returns">
+<title>Returns</title>
+<para>The reply set on <parameter>promise</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="GstPromise.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstPromiseResult" role="enum" condition="since:1.14">
+<title>enum GstPromiseResult</title>
+<indexterm zone="GstPromiseResult" role="1.14"><primary>GstPromiseResult</primary></indexterm>
+<para>The result of a <link linkend="GstPromise"><type>GstPromise</type></link></para>
+<refsect3 id="GstPromiseResult.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PROMISE-RESULT-PENDING:CAPS">GST_PROMISE_RESULT_PENDING</para></entry>
+<entry role="enum_member_description"><para>Initial state. Waiting for transition to any
+	other state.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PROMISE-RESULT-INTERRUPTED:CAPS">GST_PROMISE_RESULT_INTERRUPTED</para></entry>
+<entry role="enum_member_description"><para>Interrupted by the consumer as it doesn't
+	want the value anymore.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PROMISE-RESULT-REPLIED:CAPS">GST_PROMISE_RESULT_REPLIED</para></entry>
+<entry role="enum_member_description"><para>A producer marked a reply</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PROMISE-RESULT-EXPIRED:CAPS">GST_PROMISE_RESULT_EXPIRED</para></entry>
+<entry role="enum_member_description"><para>The promise expired (the carrying object
+	lost all refs) and the promise will never be fulfilled.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+<refsect2 id="GstPromise-struct" role="struct">
+<title>struct GstPromise</title>
+<indexterm zone="GstPromise-struct" role="1.14"><primary>GstPromise</primary></indexterm>
+<programlisting language="C">struct GstPromise {
+  GstMiniObject         parent;
+};
+</programlisting>
+<refsect3 id="GstPromise.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMiniObject"><type>GstMiniObject</type></link>&#160;<structfield id="GstPromise-struct.parent">parent</structfield>;</para></entry>
+<entry role="struct_member_description"><para>parent <link linkend="GstMiniObject"><type>GstMiniObject</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.14">1.14</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

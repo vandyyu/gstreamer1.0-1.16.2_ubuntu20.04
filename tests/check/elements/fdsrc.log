@@ -1,0 +1,4 @@
+Running suite(s): fdsrc
+100%: Checks: 3, Failures: 0, Errors: 0
+Check suite fdsrc ran in 0.004s (tests failed: 0)
+PASS elements/fdsrc (exit status: 0)

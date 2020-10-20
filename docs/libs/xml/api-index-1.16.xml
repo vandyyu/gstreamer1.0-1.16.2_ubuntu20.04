@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.16">
+<indexdiv><title>A</title>
+<indexentry><primaryie linkends="GstAggregator--min-upstream-latency"><link linkend="GstAggregator--min-upstream-latency">GstAggregator:min-upstream-latency</link>, object property in <link linkend="GstAggregator">GstAggregator</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstAggregatorPad--emit-signals"><link linkend="GstAggregatorPad--emit-signals">GstAggregatorPad:emit-signals</link>, object property in <link linkend="GstAggregatorPad">GstAggregatorPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-aggregator-simple-get-next-time"><link linkend="gst-aggregator-simple-get-next-time">gst_aggregator_simple_get_next_time</link>, function in <link linkend="GstAggregator">GstAggregator</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="GstBaseSink--processing-deadline"><link linkend="GstBaseSink--processing-deadline">GstBaseSink:processing-deadline</link>, object property in <link linkend="GstBaseSink">GstBaseSink</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstBitWriter"><link linkend="GstBitWriter">GstBitWriter</link>, struct in <link linkend="gstreamer-libs-GstBitWriter">GstBitWriter</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>H</title>
+<indexentry><primaryie linkends="gst-harness-add-propose-allocation-meta"><link linkend="gst-harness-add-propose-allocation-meta">gst_harness_add_propose_allocation_meta</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>Q</title>
+<indexentry><primaryie linkends="gst-queue-array-clear"><link linkend="gst-queue-array-clear">gst_queue_array_clear</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-queue-array-peek-nth"><link linkend="gst-queue-array-peek-nth">gst_queue_array_peek_nth</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-queue-array-peek-nth-struct"><link linkend="gst-queue-array-peek-nth-struct">gst_queue_array_peek_nth_struct</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-queue-array-set-clear-func"><link linkend="gst-queue-array-set-clear-func">gst_queue_array_set_clear_func</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>T</title>
+<indexentry><primaryie linkends="gst-test-clock-timed-wait-for-multiple-pending-ids"><link linkend="gst-test-clock-timed-wait-for-multiple-pending-ids">gst_test_clock_timed_wait_for_multiple_pending_ids</link>, function in <link linkend="GstTestClock">GstTestClock</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-type-find-helper-for-buffer-with-extension"><link linkend="gst-type-find-helper-for-buffer-with-extension">gst_type_find_helper_for_buffer_with_extension</link>, function in <link linkend="gstreamer-libs-GstTypeFindHelper">GstTypeFindHelper</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-type-find-helper-for-data-with-extension"><link linkend="gst-type-find-helper-for-data-with-extension">gst_type_find_helper_for_data_with_extension</link>, function in <link linkend="gstreamer-libs-GstTypeFindHelper">GstTypeFindHelper</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

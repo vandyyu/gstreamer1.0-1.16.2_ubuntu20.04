@@ -1,0 +1,4 @@
+Running suite(s): GstABI
+100%: Checks: 1, Failures: 0, Errors: 0
+Check suite gstabi ran in 0.001s (tests failed: 0)
+PASS gst/gstabi (exit status: 0)

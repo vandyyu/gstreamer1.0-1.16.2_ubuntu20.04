@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.14">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-buffer-add-reference-timestamp-meta"><link linkend="gst-buffer-add-reference-timestamp-meta">gst_buffer_add_reference_timestamp_meta</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-get-n-meta"><link linkend="gst-buffer-get-n-meta">gst_buffer_get_n_meta</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-get-reference-timestamp-meta"><link linkend="gst-buffer-get-reference-timestamp-meta">gst_buffer_get_reference_timestamp_meta</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-list-calculate-size"><link linkend="gst-buffer-list-calculate-size">gst_buffer_list_calculate_size</link>, function in <link linkend="GstBufferList">GstBufferList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-list-get-writable"><link linkend="gst-buffer-list-get-writable">gst_buffer_list_get_writable</link>, function in <link linkend="GstBufferList">GstBufferList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-bus-get-pollfd"><link linkend="gst-bus-get-pollfd">gst_bus_get_pollfd</link>, function in <link linkend="GstBus">GstBus</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="gst-debug-add-ring-buffer-logger"><link linkend="gst-debug-add-ring-buffer-logger">gst_debug_add_ring_buffer_logger</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-debug-remove-ring-buffer-logger"><link linkend="gst-debug-remove-ring-buffer-logger">gst_debug_remove_ring_buffer_logger</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-debug-ring-buffer-logger-get-logs"><link linkend="gst-debug-ring-buffer-logger-get-logs">gst_debug_ring_buffer_logger_get_logs</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-device-provider-get-metadata"><link linkend="gst-device-provider-get-metadata">gst_device_provider_get_metadata</link>, function in <link linkend="gstreamer-GstDeviceProvider">GstDeviceProvider</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="GstElementForeachPadFunc"><link linkend="GstElementForeachPadFunc">GstElementForeachPadFunc</link>, user_function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-class-add-static-pad-template-with-gtype"><link linkend="gst-element-class-add-static-pad-template-with-gtype">gst_element_class_add_static_pad_template_with_gtype</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-foreach-pad"><link linkend="gst-element-foreach-pad">gst_element_foreach_pad</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-foreach-sink-pad"><link linkend="gst-element-foreach-sink-pad">gst_element_foreach_sink_pad</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-foreach-src-pad"><link linkend="gst-element-foreach-src-pad">gst_element_foreach_src_pad</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-get-metadata"><link linkend="gst-element-get-metadata">gst_element_get_metadata</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-get-pad-template"><link linkend="gst-element-get-pad-template">gst_element_get_pad_template</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-get-pad-template-list"><link linkend="gst-element-get-pad-template-list">gst_element_get_pad_template_list</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="gst-get-main-executable-path"><link linkend="gst-get-main-executable-path">gst_get_main_executable_path</link>, function in <link linkend="gstreamer-Gst">Gst</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-GROUP-ID-INVALID:CAPS"><link linkend="GST-GROUP-ID-INVALID:CAPS">GST_GROUP_ID_INVALID</link>, macro in <link linkend="gstreamer-GstUtils">GstUtils</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="gst-message-writable-structure"><link linkend="gst-message-writable-structure">gst_message_writable_structure</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="GstPadTemplate--gtype"><link linkend="GstPadTemplate--gtype">GstPadTemplate:gtype</link>, object property in <link linkend="GstPadTemplate">GstPadTemplate</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-PAD-TEMPLATE-GTYPE:CAPS"><link linkend="GST-PAD-TEMPLATE-GTYPE:CAPS">GST_PAD_TEMPLATE_GTYPE</link>, macro in <link linkend="GstPadTemplate">GstPadTemplate</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-pad-template-new-from-static-pad-template-with-gtype"><link linkend="gst-pad-template-new-from-static-pad-template-with-gtype">gst_pad_template_new_from_static_pad_template_with_gtype</link>, function in <link linkend="GstPadTemplate">GstPadTemplate</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-pad-template-new-with-gtype"><link linkend="gst-pad-template-new-with-gtype">gst_pad_template_new_with_gtype</link>, function in <link linkend="GstPadTemplate">GstPadTemplate</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-param-spec-array"><link linkend="gst-param-spec-array">gst_param_spec_array</link>, function in <link linkend="gstreamer-GstParamSpec">GstParamSpec</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstPromise-struct"><link linkend="GstPromise-struct">GstPromise</link>, struct in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstPromiseChangeFunc"><link linkend="GstPromiseChangeFunc">GstPromiseChangeFunc</link>, user_function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstPromiseResult"><link linkend="GstPromiseResult">GstPromiseResult</link>, enum in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-expire"><link linkend="gst-promise-expire">gst_promise_expire</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-get-reply"><link linkend="gst-promise-get-reply">gst_promise_get_reply</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-interrupt"><link linkend="gst-promise-interrupt">gst_promise_interrupt</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-new"><link linkend="gst-promise-new">gst_promise_new</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-new-with-change-func"><link linkend="gst-promise-new-with-change-func">gst_promise_new_with_change_func</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-ref"><link linkend="gst-promise-ref">gst_promise_ref</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-reply"><link linkend="gst-promise-reply">gst_promise_reply</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-unref"><link linkend="gst-promise-unref">gst_promise_unref</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-promise-wait"><link linkend="gst-promise-wait">gst_promise_wait</link>, function in <link linkend="GstPromise">GstPromise</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-protection-filter-systems-by-available-decryptors"><link linkend="gst-protection-filter-systems-by-available-decryptors">gst_protection_filter_systems_by_available_decryptors</link>, function in <link linkend="gstreamer-GstProtectionMeta">GstProtectionMeta</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>R</title>
+<indexentry><primaryie linkends="GstReferenceTimestampMeta"><link linkend="GstReferenceTimestampMeta">GstReferenceTimestampMeta</link>, struct in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="GST-SEQNUM-INVALID:CAPS"><link linkend="GST-SEQNUM-INVALID:CAPS">GST_SEQNUM_INVALID</link>, macro in <link linkend="gstreamer-GstUtils">GstUtils</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-state-change-get-name"><link linkend="gst-state-change-get-name">gst_state_change_get_name</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>U</title>
+<indexentry><primaryie linkends="gst-util-dump-buffer"><link linkend="gst-util-dump-buffer">gst_util_dump_buffer</link>, function in <link linkend="gstreamer-GstUtils">GstUtils</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

@@ -1,0 +1,4 @@
+Running suite(s): pipelines-seek
+100%: Checks: 3, Failures: 0, Errors: 0
+Check suite pipelines_seek ran in 7.018s (tests failed: 0)
+PASS pipelines/seek (exit status: 0)

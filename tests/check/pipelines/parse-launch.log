@@ -1,0 +1,4 @@
+Running suite(s): Parse Launch syntax
+100%: Checks: 8, Failures: 0, Errors: 0
+Check suite parse ran in 0.029s (tests failed: 0)
+PASS pipelines/parse-launch (exit status: 0)

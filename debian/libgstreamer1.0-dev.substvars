@@ -1,0 +1,4 @@
+perl:Depends=perl:any
+shlibs:Depends=libc6 (>= 2.4), libglib2.0-0 (>= 2.40), libgstreamer1.0-0 (>= 1.4.0)
+misc:Depends=
+misc:Pre-Depends=

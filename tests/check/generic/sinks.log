@@ -1,0 +1,4 @@
+Running suite(s): Sinks
+100%: Checks: 20, Failures: 0, Errors: 0
+Check suite gst_sinks ran in 4.042s (tests failed: 0)
+PASS generic/sinks (exit status: 0)

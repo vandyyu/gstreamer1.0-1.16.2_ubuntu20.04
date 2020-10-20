@@ -1,0 +1,4 @@
+Running suite(s): GstTagSetter
+100%: Checks: 4, Failures: 0, Errors: 0
+Check suite gst_tag_setter ran in 1.508s (tests failed: 0)
+PASS gst/gsttagsetter (exit status: 0)

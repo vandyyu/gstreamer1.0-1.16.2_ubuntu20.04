@@ -1,0 +1,3 @@
+100%: Checks: 4, Failures: 0, Errors: 0
+Check suite states ran in 0.010s (tests failed: 0)
+PASS generic/states (exit status: 0)

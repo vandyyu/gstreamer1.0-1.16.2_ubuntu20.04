@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<refentry id="GstTracerRecord">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstTracerRecord.top_of_page">GstTracerRecord</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstTracerRecord</refname>
+<refpurpose>Trace log entry class</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstTracerRecord.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstTracerRecord"><returnvalue>GstTracerRecord</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-tracer-record-new">gst_tracer_record_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-tracer-record-log">gst_tracer_record_log</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracerRecord.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstTracerRecord-struct">GstTracerRecord</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstTracerValueFlags">GstTracerValueFlags</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstTracerValueScope">GstTracerValueScope</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracerRecord.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstTracerRecord
+</screen>
+</refsect1>
+
+<refsect1 id="GstTracerRecord.includes"><title>Includes</title><synopsis>#include &lt;gst/gst.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="GstTracerRecord.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Tracing modules will create instances of this class to announce the data they
+will log and create a log formatter.</para>
+
+</refsect1>
+<refsect1 id="GstTracerRecord.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-tracer-record-new" role="function">
+<title>gst_tracer_record_new&#160;()</title>
+<indexterm zone="gst-tracer-record-new"><primary>gst_tracer_record_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstTracerRecord"><returnvalue>GstTracerRecord</returnvalue></link>&#160;*
+gst_tracer_record_new (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                       <parameter>const <link linkend="gchar"><type>gchar</type></link> *firstfield</parameter>,
+                       <parameter>...</parameter>);</programlisting>
+<para>Create a new tracer record. The record instance can be used to efficiently
+log entries using <link linkend="gst-tracer-record-log"><function>gst_tracer_record_log()</function></link>.</para>
+<para>The <parameter>name</parameter>
+ without the ".class" suffix will be used for the log records.
+There must be fields for each value that gets logged where the field name is
+the value name. The field must be a <link linkend="GstStructure"><type>GstStructure</type></link> describing the value. The
+sub structure must contain a field called 'type' of <link linkend="G-TYPE-GTYPE:CAPS"><literal>G_TYPE_GTYPE</literal></link> that
+contains the GType of the value. The resulting <link linkend="GstTracerRecord"><type>GstTracerRecord</type></link> will take
+ownership of the field structures.</para>
+<para>The way to deal with optional values is to log an additional boolean before
+the optional field, that if <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> signals that the optional field is valid
+and <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> signals that the optional field should be ignored. One must still
+log a placeholder value for the optional field though. Please also note, that
+pointer type values must not be NULL - the underlying serialisation can not
+handle that right now.</para>
+<blockquote>
+<para>Please note that this is still under discussion and subject to change.</para>
+</blockquote>
+<refsect3 id="gst-tracer-record-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>name of new record, must end on ".class".</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>firstfield</para></entry>
+<entry role="parameter_description"><para>name of first field to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>additional arguments</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-tracer-record-new.returns" role="returns">
+<title>Returns</title>
+<para>a new <link linkend="GstTracerRecord"><type>GstTracerRecord</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-tracer-record-log" role="function">
+<title>gst_tracer_record_log&#160;()</title>
+<indexterm zone="gst-tracer-record-log"><primary>gst_tracer_record_log</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_tracer_record_log (<parameter><link linkend="GstTracerRecord"><type>GstTracerRecord</type></link> *self</parameter>,
+                       <parameter>...</parameter>);</programlisting>
+<para>Serialzes the trace event into the log.</para>
+<para>Right now this is using the gstreamer debug log with the level TRACE (7) and
+the category "GST_TRACER".</para>
+<blockquote>
+<para>Please note that this is still under discussion and subject to change.</para>
+</blockquote>
+<refsect3 id="gst-tracer-record-log.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer-record</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>the args as described in the spec-</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstTracerRecord.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTracerRecord-struct" role="struct">
+<title>GstTracerRecord</title>
+<indexterm zone="GstTracerRecord-struct"><primary>GstTracerRecord</primary></indexterm>
+<programlisting language="C">typedef struct _GstTracerRecord GstTracerRecord;</programlisting>
+</refsect2>
+<refsect2 id="GstTracerValueFlags" role="enum">
+<title>enum GstTracerValueFlags</title>
+<indexterm zone="GstTracerValueFlags"><primary>GstTracerValueFlags</primary></indexterm>
+<para>Flag that describe the value. These flags help applications processing the
+logs to understand the values.</para>
+<refsect3 id="GstTracerValueFlags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-FLAGS-NONE:CAPS">GST_TRACER_VALUE_FLAGS_NONE</para></entry>
+<entry role="enum_member_description"><para>no flags</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-FLAGS-OPTIONAL:CAPS">GST_TRACER_VALUE_FLAGS_OPTIONAL</para></entry>
+<entry role="enum_member_description"><para>the value is optional. When using this flag
+one need to have an additional boolean arg before this value in the
+var-args list passed to  <link linkend="gst-tracer-record-log"><function>gst_tracer_record_log()</function></link>.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-FLAGS-AGGREGATED:CAPS">GST_TRACER_VALUE_FLAGS_AGGREGATED</para></entry>
+<entry role="enum_member_description"><para>the value is a combined figure, since the
+start of tracing. Examples are averages or timestamps.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerValueScope" role="enum" condition="since:1.8">
+<title>enum GstTracerValueScope</title>
+<indexterm zone="GstTracerValueScope" role="1.8"><primary>GstTracerValueScope</primary></indexterm>
+<para>Tracing record will contain fields that contain a measured value or extra
+meta-data. One such meta data are values that tell where a measurement was
+taken. This enumerating declares to which scope such a meta data field
+relates to. If it is e.g. <link linkend="GST-TRACER-VALUE-SCOPE-PAD:CAPS"><literal>GST_TRACER_VALUE_SCOPE_PAD</literal></link>, then each of the log
+events may contain values for different <link linkend="GstPads"><type>GstPads</type></link>.</para>
+<refsect3 id="GstTracerValueScope.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-SCOPE-PROCESS:CAPS">GST_TRACER_VALUE_SCOPE_PROCESS</para></entry>
+<entry role="enum_member_description"><para>the value is related to the process</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-SCOPE-THREAD:CAPS">GST_TRACER_VALUE_SCOPE_THREAD</para></entry>
+<entry role="enum_member_description"><para>the value is related to a thread</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-SCOPE-ELEMENT:CAPS">GST_TRACER_VALUE_SCOPE_ELEMENT</para></entry>
+<entry role="enum_member_description"><para>the value is related to an <link linkend="GstElement"><type>GstElement</type></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-TRACER-VALUE-SCOPE-PAD:CAPS">GST_TRACER_VALUE_SCOPE_PAD</para></entry>
+<entry role="enum_member_description"><para>the value is related to a <link linkend="GstPad"><type>GstPad</type></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

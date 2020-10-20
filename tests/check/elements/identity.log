@@ -1,0 +1,4 @@
+Running suite(s): identity
+100%: Checks: 4, Failures: 0, Errors: 0
+Check suite identity ran in 0.025s (tests failed: 0)
+PASS elements/identity (exit status: 0)

@@ -1,0 +1,4 @@
+Running suite(s): GstCaps
+100%: Checks: 27, Failures: 0, Errors: 0
+Check suite gst_caps ran in 0.047s (tests failed: 0)
+PASS gst/gstcaps (exit status: 0)

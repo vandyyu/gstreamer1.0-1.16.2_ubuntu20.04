@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<refentry id="GstTracerFactory">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstTracerFactory.top_of_page">GstTracerFactory</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstTracerFactory</refname>
+<refpurpose>Information about registered tracer functions</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstTracerFactory.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-tracer-factory-get-list">gst_tracer_factory_get_list</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GType"><returnvalue>GType</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-tracer-factory-get-tracer-type">gst_tracer_factory_get_tracer_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracerFactory.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstTracerFactory-struct">GstTracerFactory</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracerFactory.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPluginFeature">GstPluginFeature</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstTracerFactory
+</screen>
+</refsect1>
+
+<refsect1 id="GstTracerFactory.includes"><title>Includes</title><synopsis>#include &lt;gst/gst.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="GstTracerFactory.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Use <link linkend="gst-tracer-factory-get-list"><function>gst_tracer_factory_get_list()</function></link> to get a list of tracer factories known to
+GStreamer.</para>
+
+</refsect1>
+<refsect1 id="GstTracerFactory.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-tracer-factory-get-list" role="function" condition="since:1.8">
+<title>gst_tracer_factory_get_list&#160;()</title>
+<indexterm zone="gst-tracer-factory-get-list" role="1.8"><primary>gst_tracer_factory_get_list</primary></indexterm>
+<programlisting language="C"><link linkend="GList"><returnvalue>GList</returnvalue></link>&#160;*
+gst_tracer_factory_get_list (<parameter><type>void</type></parameter>);</programlisting>
+<para>Gets the list of all registered tracer factories. You must free the
+list using <link linkend="gst-plugin-feature-list-free"><function>gst_plugin_feature_list_free()</function></link>.</para>
+<para>The returned factories are sorted by factory name.</para>
+<para>Free-function: gst_plugin_feature_list_free</para>
+<refsect3 id="gst-tracer-factory-get-list.returns" role="returns">
+<title>Returns</title>
+<para>the list of all
+registered <link linkend="GstTracerFactory"><type>GstTracerFactory</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>element-type</acronym> Gst.TracerFactory]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-tracer-factory-get-tracer-type" role="function">
+<title>gst_tracer_factory_get_tracer_type&#160;()</title>
+<indexterm zone="gst-tracer-factory-get-tracer-type"><primary>gst_tracer_factory_get_tracer_type</primary></indexterm>
+<programlisting language="C"><link linkend="GType"><returnvalue>GType</returnvalue></link>
+gst_tracer_factory_get_tracer_type (<parameter><link linkend="GstTracerFactory"><type>GstTracerFactory</type></link> *factory</parameter>);</programlisting>
+<para>Get the <link linkend="GType"><type>GType</type></link> for elements managed by this factory. The type can
+only be retrieved if the element factory is loaded, which can be
+assured with <link linkend="gst-plugin-feature-load"><function>gst_plugin_feature_load()</function></link>.</para>
+<refsect3 id="gst-tracer-factory-get-tracer-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>factory</para></entry>
+<entry role="parameter_description"><para>factory to get managed <link linkend="GType"><type>GType</type></link> from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-tracer-factory-get-tracer-type.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GType"><type>GType</type></link> for tracers managed by this factory or 0 if
+the factory is not loaded.</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstTracerFactory.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTracerFactory-struct" role="struct">
+<title>GstTracerFactory</title>
+<indexterm zone="GstTracerFactory-struct" role="1.8"><primary>GstTracerFactory</primary></indexterm>
+<programlisting language="C">typedef struct _GstTracerFactory GstTracerFactory;</programlisting>
+<para>Opaque object that stores information about a tracer function.</para>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

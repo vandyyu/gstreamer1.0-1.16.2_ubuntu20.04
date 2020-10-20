@@ -1,0 +1,4 @@
+Running suite(s): valve
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite valve ran in 0.002s (tests failed: 0)
+PASS elements/valve (exit status: 0)

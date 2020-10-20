@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-1.16">
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="GstIdentity--eos-after"><link linkend="GstIdentity--eos-after">GstIdentity:eos-after</link>, object property in <link linkend="gstreamer-plugins-identity">identity</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

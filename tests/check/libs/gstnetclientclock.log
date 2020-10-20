@@ -1,0 +1,4 @@
+Running suite(s): GstNetClientClock
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite gst_net_client_clock ran in 0.652s (tests failed: 0)
+PASS libs/gstnetclientclock (exit status: 0)

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.8">
+<indexdiv><title>H</title>
+<indexentry><primaryie linkends="GstHarnessPrepareEventFunc"><link linkend="GstHarnessPrepareEventFunc">GstHarnessPrepareEventFunc</link>, user_function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-harness-new-empty"><link linkend="gst-harness-new-empty">gst_harness_new_empty</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-harness-stress-push-event-with-cb-start-full"><link linkend="gst-harness-stress-push-event-with-cb-start-full">gst_harness_stress_push_event_with_cb_start_full</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-harness-stress-push-upstream-event-with-cb-start-full"><link linkend="gst-harness-stress-push-upstream-event-with-cb-start-full">gst_harness_stress_push_upstream_event_with_cb_start_full</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>T</title>
+<indexentry><primaryie linkends="gst-test-clock-crank"><link linkend="gst-test-clock-crank">gst_test_clock_crank</link>, function in <link linkend="GstTestClock">GstTestClock</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

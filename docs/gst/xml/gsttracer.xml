@@ -1,0 +1,1351 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<refentry id="GstTracer">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstTracer.top_of_page">GstTracer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstTracer</refname>
+<refpurpose>Tracing base class</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstTracer.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-tracer-register">gst_tracer_register</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-tracing-register-hook">gst_tracing_register_hook</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookBinAddPost">*GstTracerHookBinAddPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookBinAddPre">*GstTracerHookBinAddPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookBinRemovePost">*GstTracerHookBinRemovePost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookBinRemovePre">*GstTracerHookBinRemovePre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementAddPad">*GstTracerHookElementAddPad</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementChangeStatePost">*GstTracerHookElementChangeStatePost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementChangeStatePre">*GstTracerHookElementChangeStatePre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementNew">*GstTracerHookElementNew</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementPostMessagePost">*GstTracerHookElementPostMessagePost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementPostMessagePre">*GstTracerHookElementPostMessagePre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementQueryPost">*GstTracerHookElementQueryPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementQueryPre">*GstTracerHookElementQueryPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookElementRemovePad">*GstTracerHookElementRemovePad</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookMiniObjectCreated">*GstTracerHookMiniObjectCreated</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookMiniObjectDestroyed">*GstTracerHookMiniObjectDestroyed</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookMiniObjectReffed">*GstTracerHookMiniObjectReffed</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookMiniObjectUnreffed">*GstTracerHookMiniObjectUnreffed</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookObjectCreated">*GstTracerHookObjectCreated</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookObjectDestroyed">*GstTracerHookObjectDestroyed</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookObjectReffed">*GstTracerHookObjectReffed</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookObjectUnreffed">*GstTracerHookObjectUnreffed</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadLinkPost">*GstTracerHookPadLinkPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadLinkPre">*GstTracerHookPadLinkPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPullRangePost">*GstTracerHookPadPullRangePost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPullRangePre">*GstTracerHookPadPullRangePre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPushEventPost">*GstTracerHookPadPushEventPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPushEventPre">*GstTracerHookPadPushEventPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPushListPost">*GstTracerHookPadPushListPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPushListPre">*GstTracerHookPadPushListPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPushPost">*GstTracerHookPadPushPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadPushPre">*GstTracerHookPadPushPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadQueryPost">*GstTracerHookPadQueryPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadQueryPre">*GstTracerHookPadQueryPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadUnlinkPost">*GstTracerHookPadUnlinkPost</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstTracerHookPadUnlinkPre">*GstTracerHookPadUnlinkPre</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstTracer--params">params</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstTracer-struct">GstTracer</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstTracer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstTracer
+</screen>
+</refsect1>
+
+<refsect1 id="GstTracer.includes"><title>Includes</title><synopsis>#include &lt;gst/gst.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="GstTracer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Tracing modules will subclass <link linkend="GstTracer"><type>GstTracer</type></link> and register through
+<link linkend="gst-tracer-register"><function>gst_tracer_register()</function></link>. Modules can attach to various hook-types - see
+<link linkend="gst-tracing-register-hook"><function>gst_tracing_register_hook()</function></link>. When invoked they receive hook specific
+contextual data, which they must not modify.</para>
+
+</refsect1>
+<refsect1 id="GstTracer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-tracer-register" role="function">
+<title>gst_tracer_register&#160;()</title>
+<indexterm zone="gst-tracer-register"><primary>gst_tracer_register</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_tracer_register (<parameter><link linkend="GstPlugin"><type>GstPlugin</type></link> *plugin</parameter>,
+                     <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                     <parameter><link linkend="GType"><type>GType</type></link> type</parameter>);</programlisting>
+<para>Create a new tracer-factory  capable of instantiating objects of the
+<parameter>type</parameter>
+ and add the factory to <parameter>plugin</parameter>
+.</para>
+<refsect3 id="gst-tracer-register.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>plugin</para></entry>
+<entry role="parameter_description"><para>A <link linkend="GstPlugin"><type>GstPlugin</type></link>, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> for a static typefind function. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>The name for registering</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>GType of tracer to register</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-tracer-register.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>, if the registering succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> on error</para>
+</refsect3></refsect2>
+<refsect2 id="gst-tracing-register-hook" role="function">
+<title>gst_tracing_register_hook&#160;()</title>
+<indexterm zone="gst-tracing-register-hook"><primary>gst_tracing_register_hook</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_tracing_register_hook (<parameter><link linkend="GstTracer"><type>GstTracer</type></link> *tracer</parameter>,
+                           <parameter>const <link linkend="gchar"><type>gchar</type></link> *detail</parameter>,
+                           <parameter><link linkend="GCallback"><type>GCallback</type></link> func</parameter>);</programlisting>
+<para>Register <parameter>func</parameter>
+ to be called when the trace hook <parameter>detail</parameter>
+ is getting invoked.
+Use <link linkend="NULL:CAPS"><literal>NULL</literal></link> for <parameter>detail</parameter>
+ to register to all hooks.</para>
+<refsect3 id="gst-tracing-register-hook.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>tracer</para></entry>
+<entry role="parameter_description"><para>the tracer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>detail</para></entry>
+<entry role="parameter_description"><para>the detailed hook</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>func</para></entry>
+<entry role="parameter_description"><para>the callback. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookBinAddPost" role="function">
+<title>GstTracerHookBinAddPost&#160;()</title>
+<indexterm zone="GstTracerHookBinAddPost"><primary>GstTracerHookBinAddPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookBinAddPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                            <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                            <parameter><link linkend="GstBin"><type>GstBin</type></link> *bin</parameter>,
+                            <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                            <parameter><link linkend="gboolean"><type>gboolean</type></link> result</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-bin-add"><function>gst_bin_add()</function></link> named "bin-add-post".</para>
+<refsect3 id="GstTracerHookBinAddPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>bin</para></entry>
+<entry role="parameter_description"><para>the bin</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-bin-add"><function>gst_bin_add()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookBinAddPre" role="function">
+<title>GstTracerHookBinAddPre&#160;()</title>
+<indexterm zone="GstTracerHookBinAddPre"><primary>GstTracerHookBinAddPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookBinAddPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                           <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                           <parameter><link linkend="GstBin"><type>GstBin</type></link> *bin</parameter>,
+                           <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-bin-add"><function>gst_bin_add()</function></link> named "bin-add-pre".</para>
+<refsect3 id="GstTracerHookBinAddPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>bin</para></entry>
+<entry role="parameter_description"><para>the bin</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookBinRemovePost" role="function">
+<title>GstTracerHookBinRemovePost&#160;()</title>
+<indexterm zone="GstTracerHookBinRemovePost"><primary>GstTracerHookBinRemovePost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookBinRemovePost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                               <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                               <parameter><link linkend="GstBin"><type>GstBin</type></link> *bin</parameter>,
+                               <parameter><link linkend="gboolean"><type>gboolean</type></link> result</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-bin-remove"><function>gst_bin_remove()</function></link> named "bin-remove-post".</para>
+<refsect3 id="GstTracerHookBinRemovePost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>bin</para></entry>
+<entry role="parameter_description"><para>the bin</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-bin-remove"><function>gst_bin_remove()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookBinRemovePre" role="function">
+<title>GstTracerHookBinRemovePre&#160;()</title>
+<indexterm zone="GstTracerHookBinRemovePre"><primary>GstTracerHookBinRemovePre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookBinRemovePre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                              <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                              <parameter><link linkend="GstBin"><type>GstBin</type></link> *bin</parameter>,
+                              <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-bin-remove"><function>gst_bin_remove()</function></link> named "bin-remove-pre".</para>
+<refsect3 id="GstTracerHookBinRemovePre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>bin</para></entry>
+<entry role="parameter_description"><para>the bin</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementAddPad" role="function">
+<title>GstTracerHookElementAddPad&#160;()</title>
+<indexterm zone="GstTracerHookElementAddPad"><primary>GstTracerHookElementAddPad</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementAddPad<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                               <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                               <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                               <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>);</programlisting>
+<para>Hook for <link linkend="gst-element-add-pad"><function>gst_element_add_pad()</function></link> named "element-add-pad".</para>
+<refsect3 id="GstTracerHookElementAddPad.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementChangeStatePost" role="function">
+<title>GstTracerHookElementChangeStatePost&#160;()</title>
+<indexterm zone="GstTracerHookElementChangeStatePost"><primary>GstTracerHookElementChangeStatePost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementChangeStatePost<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                <parameter><link linkend="GstStateChange"><type>GstStateChange</type></link> transition</parameter>,
+                                <parameter><link linkend="GstStateChangeReturn"><type>GstStateChangeReturn</type></link> result</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-element-change-state"><function>gst_element_change_state()</function></link> named "element-change-state-post".</para>
+<refsect3 id="GstTracerHookElementChangeStatePost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>transition</para></entry>
+<entry role="parameter_description"><para>the transition</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-push"><function>gst_pad_push()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementChangeStatePre" role="function">
+<title>GstTracerHookElementChangeStatePre&#160;()</title>
+<indexterm zone="GstTracerHookElementChangeStatePre"><primary>GstTracerHookElementChangeStatePre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementChangeStatePre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                       <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                       <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                       <parameter><link linkend="GstStateChange"><type>GstStateChange</type></link> transition</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-element-change-state"><function>gst_element_change_state()</function></link> named "element-change-state-pre".</para>
+<refsect3 id="GstTracerHookElementChangeStatePre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>transition</para></entry>
+<entry role="parameter_description"><para>the transition</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementNew" role="function">
+<title>GstTracerHookElementNew&#160;()</title>
+<indexterm zone="GstTracerHookElementNew"><primary>GstTracerHookElementNew</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementNew<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                            <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                            <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>);</programlisting>
+<para>Hook for whenever a new element is created, named "element-new".</para>
+<refsect3 id="GstTracerHookElementNew.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementPostMessagePost" role="function">
+<title>GstTracerHookElementPostMessagePost&#160;()</title>
+<indexterm zone="GstTracerHookElementPostMessagePost"><primary>GstTracerHookElementPostMessagePost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementPostMessagePost<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> res</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-element-post-message"><function>gst_element_post_message()</function></link> named "element-post-message-post".</para>
+<refsect3 id="GstTracerHookElementPostMessagePost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-element-post-message"><function>gst_element_post_message()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementPostMessagePre" role="function">
+<title>GstTracerHookElementPostMessagePre&#160;()</title>
+<indexterm zone="GstTracerHookElementPostMessagePre"><primary>GstTracerHookElementPostMessagePre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementPostMessagePre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                       <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                       <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                       <parameter><link linkend="GstMessage"><type>GstMessage</type></link> *message</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-element-post-message"><function>gst_element_post_message()</function></link> named "element-post-message-pre".</para>
+<refsect3 id="GstTracerHookElementPostMessagePre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>message</para></entry>
+<entry role="parameter_description"><para>the message</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementQueryPost" role="function">
+<title>GstTracerHookElementQueryPost&#160;()</title>
+<indexterm zone="GstTracerHookElementQueryPost"><primary>GstTracerHookElementQueryPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementQueryPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                  <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                  <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                  <parameter><link linkend="GstQuery"><type>GstQuery</type></link> *query</parameter>,
+                                  <parameter><link linkend="gboolean"><type>gboolean</type></link> res</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-element-query"><function>gst_element_query()</function></link> named "element-query-post".</para>
+<refsect3 id="GstTracerHookElementQueryPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-element-query"><function>gst_element_query()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementQueryPre" role="function">
+<title>GstTracerHookElementQueryPre&#160;()</title>
+<indexterm zone="GstTracerHookElementQueryPre"><primary>GstTracerHookElementQueryPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementQueryPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                 <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                 <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                 <parameter><link linkend="GstQuery"><type>GstQuery</type></link> *query</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-element-query"><function>gst_element_query()</function></link> named "element-query-pre".</para>
+<refsect3 id="GstTracerHookElementQueryPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookElementRemovePad" role="function">
+<title>GstTracerHookElementRemovePad&#160;()</title>
+<indexterm zone="GstTracerHookElementRemovePad"><primary>GstTracerHookElementRemovePad</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookElementRemovePad<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                  <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                  <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                  <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>);</programlisting>
+<para>Hook for <link linkend="gst-element-remove-pad"><function>gst_element_remove_pad()</function></link> named "element-remove-pad".</para>
+<refsect3 id="GstTracerHookElementRemovePad.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the element</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookMiniObjectCreated" role="function">
+<title>GstTracerHookMiniObjectCreated&#160;()</title>
+<indexterm zone="GstTracerHookMiniObjectCreated"><primary>GstTracerHookMiniObjectCreated</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookMiniObjectCreated<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                   <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                   <parameter><link linkend="GstMiniObject"><type>GstMiniObject</type></link> *object</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstMiniObject"><type>GstMiniObject</type></link> is created named "mini-object-created".</para>
+<refsect3 id="GstTracerHookMiniObjectCreated.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the mini object being created</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookMiniObjectDestroyed" role="function">
+<title>GstTracerHookMiniObjectDestroyed&#160;()</title>
+<indexterm zone="GstTracerHookMiniObjectDestroyed"><primary>GstTracerHookMiniObjectDestroyed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookMiniObjectDestroyed<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                     <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                     <parameter><link linkend="GstMiniObject"><type>GstMiniObject</type></link> *object</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstMiniObject"><type>GstMiniObject</type></link> is being destroyed named
+"mini-object-destroyed".</para>
+<refsect3 id="GstTracerHookMiniObjectDestroyed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the mini object being destroyed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookMiniObjectReffed" role="function">
+<title>GstTracerHookMiniObjectReffed&#160;()</title>
+<indexterm zone="GstTracerHookMiniObjectReffed"><primary>GstTracerHookMiniObjectReffed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookMiniObjectReffed<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                  <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                  <parameter><link linkend="GstMiniObject"><type>GstMiniObject</type></link> *object</parameter>,
+                                  <parameter><link linkend="gint"><type>gint</type></link> new_refcount</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstMiniObject"><type>GstMiniObject</type></link> is being reffed named
+"mini-object-reffed".</para>
+<refsect3 id="GstTracerHookMiniObjectReffed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the mini object being reffed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_refcount</para></entry>
+<entry role="parameter_description"><para>the new refcount after refing <parameter>object</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookMiniObjectUnreffed" role="function">
+<title>GstTracerHookMiniObjectUnreffed&#160;()</title>
+<indexterm zone="GstTracerHookMiniObjectUnreffed"><primary>GstTracerHookMiniObjectUnreffed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookMiniObjectUnreffed<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                    <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                    <parameter><link linkend="GstMiniObject"><type>GstMiniObject</type></link> *object</parameter>,
+                                    <parameter><link linkend="gint"><type>gint</type></link> new_refcount</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstMiniObject"><type>GstMiniObject</type></link> is being unreffed named
+"mini-object-unreffed".</para>
+<refsect3 id="GstTracerHookMiniObjectUnreffed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the mini object being unreffed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_refcount</para></entry>
+<entry role="parameter_description"><para>the new refcount after unrefing <parameter>object</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookObjectCreated" role="function">
+<title>GstTracerHookObjectCreated&#160;()</title>
+<indexterm zone="GstTracerHookObjectCreated"><primary>GstTracerHookObjectCreated</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookObjectCreated<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                               <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                               <parameter><link linkend="GstObject"><type>GstObject</type></link> *object</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstObject"><type>GstObject</type></link> is created named "object-created".</para>
+<refsect3 id="GstTracerHookObjectCreated.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the object being created</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookObjectDestroyed" role="function">
+<title>GstTracerHookObjectDestroyed&#160;()</title>
+<indexterm zone="GstTracerHookObjectDestroyed"><primary>GstTracerHookObjectDestroyed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookObjectDestroyed<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                 <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                 <parameter><link linkend="GstObject"><type>GstObject</type></link> *object</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstObject"><type>GstObject</type></link> is being destroyed named
+"object-destroyed".</para>
+<refsect3 id="GstTracerHookObjectDestroyed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the object being destroyed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookObjectReffed" role="function">
+<title>GstTracerHookObjectReffed&#160;()</title>
+<indexterm zone="GstTracerHookObjectReffed"><primary>GstTracerHookObjectReffed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookObjectReffed<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                              <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                              <parameter><link linkend="GstObject"><type>GstObject</type></link> *object</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> new_refcount</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstObject"><type>GstObject</type></link> is being reffed named
+"object-reffed".</para>
+<refsect3 id="GstTracerHookObjectReffed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the object being reffed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_refcount</para></entry>
+<entry role="parameter_description"><para>the new refcount after refing <parameter>object</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookObjectUnreffed" role="function">
+<title>GstTracerHookObjectUnreffed&#160;()</title>
+<indexterm zone="GstTracerHookObjectUnreffed"><primary>GstTracerHookObjectUnreffed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookObjectUnreffed<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                <parameter><link linkend="GstObject"><type>GstObject</type></link> *object</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> new_refcount</parameter>);</programlisting>
+<para>Hook called when a <link linkend="GstObject"><type>GstObject</type></link> is being unreffed named
+"object-unreffed"</para>
+<refsect3 id="GstTracerHookObjectUnreffed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the object being unreffed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_refcount</para></entry>
+<entry role="parameter_description"><para>the new refcount after unrefing <parameter>object</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadLinkPost" role="function">
+<title>GstTracerHookPadLinkPost&#160;()</title>
+<indexterm zone="GstTracerHookPadLinkPost"><primary>GstTracerHookPadLinkPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadLinkPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                             <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                             <parameter><link linkend="GstPad"><type>GstPad</type></link> *srcpad</parameter>,
+                             <parameter><link linkend="GstPad"><type>GstPad</type></link> *sinkpad</parameter>,
+                             <parameter><link linkend="GstPadLinkReturn"><type>GstPadLinkReturn</type></link> result</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-link"><function>gst_pad_link()</function></link> named "pad-link-post".</para>
+<refsect3 id="GstTracerHookPadLinkPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>srcpad</para></entry>
+<entry role="parameter_description"><para>the srcpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sinkpad</para></entry>
+<entry role="parameter_description"><para>the sinkpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-link"><function>gst_pad_link()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadLinkPre" role="function">
+<title>GstTracerHookPadLinkPre&#160;()</title>
+<indexterm zone="GstTracerHookPadLinkPre"><primary>GstTracerHookPadLinkPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadLinkPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                            <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                            <parameter><link linkend="GstPad"><type>GstPad</type></link> *srcpad</parameter>,
+                            <parameter><link linkend="GstPad"><type>GstPad</type></link> *sinkpad</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-link"><function>gst_pad_link()</function></link> named "pad-link-pre".</para>
+<refsect3 id="GstTracerHookPadLinkPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>srcpad</para></entry>
+<entry role="parameter_description"><para>the srcpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sinkpad</para></entry>
+<entry role="parameter_description"><para>the sinkpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPullRangePost" role="function">
+<title>GstTracerHookPadPullRangePost&#160;()</title>
+<indexterm zone="GstTracerHookPadPullRangePost"><primary>GstTracerHookPadPullRangePost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPullRangePost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                  <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                  <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                                  <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>,
+                                  <parameter><link linkend="GstFlowReturn"><type>GstFlowReturn</type></link> res</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-pull-range"><function>gst_pad_pull_range()</function></link> named "pad-pull-range-post".</para>
+<refsect3 id="GstTracerHookPadPullRangePost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>the buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-pull-range"><function>gst_pad_pull_range()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPullRangePre" role="function">
+<title>GstTracerHookPadPullRangePre&#160;()</title>
+<indexterm zone="GstTracerHookPadPullRangePre"><primary>GstTracerHookPadPullRangePre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPullRangePre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                 <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                 <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                                 <parameter><link linkend="guint64"><type>guint64</type></link> offset</parameter>,
+                                 <parameter><link linkend="guint"><type>guint</type></link> size</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-pull-range"><function>gst_pad_pull_range()</function></link> named "pad-pull-range-pre".</para>
+<refsect3 id="GstTracerHookPadPullRangePre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>the stream offset</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the requested size</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPushEventPost" role="function">
+<title>GstTracerHookPadPushEventPost&#160;()</title>
+<indexterm zone="GstTracerHookPadPushEventPost"><primary>GstTracerHookPadPushEventPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPushEventPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                  <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                  <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                                  <parameter><link linkend="gboolean"><type>gboolean</type></link> res</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-push-event"><function>gst_pad_push_event()</function></link> named "pad-push-event-post".</para>
+<refsect3 id="GstTracerHookPadPushEventPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-push-event"><function>gst_pad_push_event()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPushEventPre" role="function">
+<title>GstTracerHookPadPushEventPre&#160;()</title>
+<indexterm zone="GstTracerHookPadPushEventPre"><primary>GstTracerHookPadPushEventPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPushEventPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                 <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                 <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                                 <parameter><link linkend="GstEvent"><type>GstEvent</type></link> *event</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-push-event"><function>gst_pad_push_event()</function></link> named "pad-push-event-pre".</para>
+<refsect3 id="GstTracerHookPadPushEventPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>event</para></entry>
+<entry role="parameter_description"><para>the event</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPushListPost" role="function">
+<title>GstTracerHookPadPushListPost&#160;()</title>
+<indexterm zone="GstTracerHookPadPushListPost"><primary>GstTracerHookPadPushListPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPushListPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                 <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                 <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                                 <parameter><link linkend="GstFlowReturn"><type>GstFlowReturn</type></link> res</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-push-list"><function>gst_pad_push_list()</function></link> named "pad-push-list-post".</para>
+<refsect3 id="GstTracerHookPadPushListPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-push-list"><function>gst_pad_push_list()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPushListPre" role="function">
+<title>GstTracerHookPadPushListPre&#160;()</title>
+<indexterm zone="GstTracerHookPadPushListPre"><primary>GstTracerHookPadPushListPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPushListPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                                <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                                <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                                <parameter><link linkend="GstBufferList"><type>GstBufferList</type></link> *list</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-push-list"><function>gst_pad_push_list()</function></link> named "pad-push-list-pre".</para>
+<refsect3 id="GstTracerHookPadPushListPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>list</para></entry>
+<entry role="parameter_description"><para>the buffer-list</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPushPost" role="function">
+<title>GstTracerHookPadPushPost&#160;()</title>
+<indexterm zone="GstTracerHookPadPushPost"><primary>GstTracerHookPadPushPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPushPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                             <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                             <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                             <parameter><link linkend="GstFlowReturn"><type>GstFlowReturn</type></link> res</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-push"><function>gst_pad_push()</function></link> named "pad-push-post".</para>
+<refsect3 id="GstTracerHookPadPushPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-push"><function>gst_pad_push()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadPushPre" role="function">
+<title>GstTracerHookPadPushPre&#160;()</title>
+<indexterm zone="GstTracerHookPadPushPre"><primary>GstTracerHookPadPushPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadPushPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                            <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                            <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                            <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-push"><function>gst_pad_push()</function></link> named "pad-push-pre".</para>
+<refsect3 id="GstTracerHookPadPushPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>the buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadQueryPost" role="function">
+<title>GstTracerHookPadQueryPost&#160;()</title>
+<indexterm zone="GstTracerHookPadQueryPost"><primary>GstTracerHookPadQueryPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadQueryPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                              <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                              <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                              <parameter><link linkend="GstQuery"><type>GstQuery</type></link> *query</parameter>,
+                              <parameter><link linkend="gboolean"><type>gboolean</type></link> res</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-query"><function>gst_pad_query()</function></link> named "pad-query-post".</para>
+<refsect3 id="GstTracerHookPadQueryPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-query"><function>gst_pad_query()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadQueryPre" role="function">
+<title>GstTracerHookPadQueryPre&#160;()</title>
+<indexterm zone="GstTracerHookPadQueryPre"><primary>GstTracerHookPadQueryPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadQueryPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                             <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                             <parameter><link linkend="GstPad"><type>GstPad</type></link> *pad</parameter>,
+                             <parameter><link linkend="GstQuery"><type>GstQuery</type></link> *query</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-query"><function>gst_pad_query()</function></link> named "pad-query-pre".</para>
+<refsect3 id="GstTracerHookPadQueryPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadUnlinkPost" role="function">
+<title>GstTracerHookPadUnlinkPost&#160;()</title>
+<indexterm zone="GstTracerHookPadUnlinkPost"><primary>GstTracerHookPadUnlinkPost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadUnlinkPost<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                               <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                               <parameter><link linkend="GstPad"><type>GstPad</type></link> *srcpad</parameter>,
+                               <parameter><link linkend="GstPad"><type>GstPad</type></link> *sinkpad</parameter>,
+                               <parameter><link linkend="gboolean"><type>gboolean</type></link> result</parameter>);</programlisting>
+<para>Post-hook for <link linkend="gst-pad-unlink"><function>gst_pad_unlink()</function></link> named "pad-unlink-post".</para>
+<refsect3 id="GstTracerHookPadUnlinkPost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>srcpad</para></entry>
+<entry role="parameter_description"><para>the srcpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sinkpad</para></entry>
+<entry role="parameter_description"><para>the sinkpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>the result of <link linkend="gst-pad-push"><function>gst_pad_push()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstTracerHookPadUnlinkPre" role="function">
+<title>GstTracerHookPadUnlinkPre&#160;()</title>
+<indexterm zone="GstTracerHookPadUnlinkPre"><primary>GstTracerHookPadUnlinkPre</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstTracerHookPadUnlinkPre<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GObject"><type>GObject</type></link> *self</parameter>,
+                              <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> ts</parameter>,
+                              <parameter><link linkend="GstPad"><type>GstPad</type></link> *srcpad</parameter>,
+                              <parameter><link linkend="GstPad"><type>GstPad</type></link> *sinkpad</parameter>);</programlisting>
+<para>Pre-hook for <link linkend="gst-pad-unlink"><function>gst_pad_unlink()</function></link> named "pad-unlink-pre".</para>
+<refsect3 id="GstTracerHookPadUnlinkPre.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the tracer instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ts</para></entry>
+<entry role="parameter_description"><para>the current timestamp</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>srcpad</para></entry>
+<entry role="parameter_description"><para>the srcpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sinkpad</para></entry>
+<entry role="parameter_description"><para>the sinkpad</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstTracer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTracer-struct" role="struct">
+<title>struct GstTracer</title>
+<indexterm zone="GstTracer-struct"><primary>GstTracer</primary></indexterm>
+<programlisting language="C">struct GstTracer;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstTracer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstTracer--params" role="property"><title>The <literal>“params”</literal> property</title>
+<indexterm zone="GstTracer--params"><primary>GstTracer:params</primary></indexterm>
+<programlisting>  “params”                   <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>Extra configuration parameters.</para><para>Owner: GstTracer</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,4 @@
+Running suite(s): GstSegment
+100%: Checks: 11, Failures: 0, Errors: 0
+Check suite gst_segment ran in 0.009s (tests failed: 0)
+PASS gst/gstsegment (exit status: 0)

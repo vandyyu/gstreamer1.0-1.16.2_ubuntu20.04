@@ -1,0 +1,4 @@
+Running suite(s): GstAtomicQueue
+100%: Checks: 1, Failures: 0, Errors: 0
+Check suite gst_atomic_queue ran in 0.001s (tests failed: 0)
+PASS gst/gstatomicqueue (exit status: 0)

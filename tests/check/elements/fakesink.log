@@ -1,0 +1,5 @@
+FIXME: skipping test test_last_message_deep_notify because it's broken
+Running suite(s): fakesink
+100%: Checks: 7, Failures: 0, Errors: 0
+Check suite fakesink ran in 10.327s (tests failed: 0)
+PASS elements/fakesink (exit status: 0)

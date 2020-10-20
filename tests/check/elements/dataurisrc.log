@@ -1,0 +1,4 @@
+Running suite(s): dataurisrc
+100%: Checks: 4, Failures: 0, Errors: 0
+Check suite dataurisrc ran in 0.021s (tests failed: 0)
+PASS elements/dataurisrc (exit status: 0)

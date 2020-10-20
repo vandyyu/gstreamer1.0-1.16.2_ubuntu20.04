@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gstreamer-plugins-leakstracer">
+<refmeta>
+<refentrytitle role="top_of_page" id="gstreamer-plugins-leakstracer.top_of_page">leakstracer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>leakstracer</refname>
+<refpurpose>detect GstObject and GstMiniObject leaks</refpurpose>
+</refnamediv>
+
+<anchor id="GstLeaksTracer"/><refsect1 id="gstreamer-plugins-leakstracer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstLeaksTracer-struct">GstLeaksTracer</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gstreamer-plugins-leakstracer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstTracer">GstTracer</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstLeaksTracer
+</screen>
+</refsect1>
+
+
+<refsect1 id="gstreamer-plugins-leakstracer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A tracing module tracking the lifetime of objects by logging those still
+alive when program is exiting and raising a warning.
+The type of objects tracked can be filtered using the parameters of the
+tracer, for example: GST_TRACERS=leaks(filters="GstEvent,GstMessage",stack-traces-flags=full)</para>
+
+</refsect1>
+<refsect1 id="gstreamer-plugins-leakstracer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gstreamer-plugins-leakstracer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstLeaksTracer-struct" role="struct">
+<title>struct GstLeaksTracer</title>
+<indexterm zone="GstLeaksTracer-struct"><primary>GstLeaksTracer</primary></indexterm>
+<programlisting language="C">struct GstLeaksTracer;</programlisting>
+<para>Opaque <link linkend="GstLeaksTracer"><type>GstLeaksTracer</type></link> data structure</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

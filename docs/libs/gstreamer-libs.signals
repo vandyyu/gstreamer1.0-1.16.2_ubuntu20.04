@@ -1,0 +1,32 @@
+<SIGNAL>
+<NAME>GstAggregatorPad::buffer-consumed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>f</FLAGS>
+GstAggregatorPad *gstaggregatorpad
+GstBuffer *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstTimedValueControlSource::value-added</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>f</FLAGS>
+GstTimedValueControlSource *gsttimedvaluecontrolsource
+GstControlPoint *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstTimedValueControlSource::value-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>f</FLAGS>
+GstTimedValueControlSource *gsttimedvaluecontrolsource
+GstControlPoint *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstTimedValueControlSource::value-removed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>f</FLAGS>
+GstTimedValueControlSource *gsttimedvaluecontrolsource
+GstControlPoint *arg1
+</SIGNAL>
+

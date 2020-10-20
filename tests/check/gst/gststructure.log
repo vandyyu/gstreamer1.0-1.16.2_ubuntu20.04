@@ -1,0 +1,4 @@
+Running suite(s): GstStructure
+100%: Checks: 24, Failures: 0, Errors: 0
+Check suite gst_structure ran in 0.015s (tests failed: 0)
+PASS gst/gststructure (exit status: 0)

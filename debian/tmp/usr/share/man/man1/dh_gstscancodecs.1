@@ -1,0 +1,69 @@
+DH_GSTSCANCODECS(1)   User Contributed Perl Documentation  DH_GSTSCANCODECS(1)
+
+
+
+NNAAMMEE
+       dh_gstscancodecs - enumerate and classify gstreamer codecs
+
+SSYYNNOOPPSSIISS
+         dh_gstscancodecs [debhelper options]
+
+DDEESSCCRRIIPPTTIIOONN
+       This program is meant to assist in building a package that provides
+       codecs, demultiplexers and other media-handling components for
+       gstreamer-based applications.
+
+       dh_gstscancodecs generates substitution variable for debian/control, by
+       scanning libraries /usr/lib/gstreamer-1.0/*.so and
+       /usr/lib/$DEB_HOST_MULTIARCH/gstreamer-1.0/*.so.
+
+       The generated substitution variables are
+
+       gstreamer:Version
+           Should be added to XB-GStreamer-Version
+
+       gstreamer:Elements
+           Should be added to XB-GStreamer-Elements
+
+       gstreamer:Provides
+           Should be added to Provides
+
+       gstreamer:URISources
+           Should be added to XB-GStreamer-URI-Sources
+
+       gstreamer:URISinks
+           Should be added to XB-GStreamer-URI-Sinks
+
+       gstreamer:Encoders
+           Should be added to XB-GStreamer-Encoders
+
+       gstreamer:Decoders
+           Should be added to XB-GStreamer-Decoders
+
+       This control fields will be used by the
+       /usr/bin/gstreamer-codec-install helper to install required missing
+       GStreamer elements.
+
+OOPPTTIIOONNSS
+       The standard debhelper options are supported.
+
+SSEEEE AALLSSOO
+       ddeebbhheellppeerr(1)
+
+       This program is an extension to debhelper.
+
+AAUUTTHHOORR
+       Ian Jackson <iwj@ubuntu.com> Sebastian Droege
+       <sebastian.droege@collabora.co.uk>
+
+PPOODD EERRRROORRSS
+       Hey! TThhee aabboovvee ddooccuummeenntt hhaadd ssoommee ccooddiinngg eerrrroorrss,, wwhhiicchh aarree eexxppllaaiinneedd
+       bbeellooww::
+
+       Around line 131:
+           Non-ASCII character seen before =encoding in 'Droege'. Assuming
+           UTF-8
+
+
+
+perl v5.30.0                      2019-12-09               DH_GSTSCANCODECS(1)

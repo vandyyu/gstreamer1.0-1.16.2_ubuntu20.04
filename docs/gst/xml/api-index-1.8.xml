@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.8">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="GST-BUFFER-DTS-OR-PTS:CAPS"><link linkend="GST-BUFFER-DTS-OR-PTS:CAPS">GST_BUFFER_DTS_OR_PTS</link>, macro in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="gst-clock-unadjust-with-calibration"><link linkend="gst-clock-unadjust-with-calibration">gst_clock_unadjust_with_calibration</link>, function in <link linkend="GstClock">GstClock</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="gst-element-class-add-static-pad-template"><link linkend="gst-element-class-add-static-pad-template">gst_element_class_add_static_pad_template</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-get-context"><link linkend="gst-element-get-context">gst_element_get_context</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-get-contexts"><link linkend="gst-element-get-contexts">gst_element_get_contexts</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-get-context-unlocked"><link linkend="gst-element-get-context-unlocked">gst_element_get_context_unlocked</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="gst-info-strdup-printf"><link linkend="gst-info-strdup-printf">gst_info_strdup_printf</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-info-strdup-vprintf"><link linkend="gst-info-strdup-vprintf">gst_info_strdup_vprintf</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-info-vasprintf"><link linkend="gst-info-vasprintf">gst_info_vasprintf</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="GstPadEventFullFunction"><link linkend="GstPadEventFullFunction">GstPadEventFullFunction</link>, user_function in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-PAD-EVENTFULLFUNC:CAPS"><link linkend="GST-PAD-EVENTFULLFUNC:CAPS">GST_PAD_EVENTFULLFUNC</link>, macro in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-pad-set-event-full-function-full"><link linkend="gst-pad-set-event-full-function-full">gst_pad_set_event_full_function_full</link>, function in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="gst-segment-position-from-running-time"><link linkend="gst-segment-position-from-running-time">gst_segment_position_from_running_time</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-segment-position-from-running-time-full"><link linkend="gst-segment-position-from-running-time-full">gst_segment_position_from_running_time_full</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-segment-position-from-stream-time"><link linkend="gst-segment-position-from-stream-time">gst_segment_position_from_stream_time</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-segment-position-from-stream-time-full"><link linkend="gst-segment-position-from-stream-time-full">gst_segment_position_from_stream_time_full</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-segment-to-stream-time"><link linkend="gst-segment-to-stream-time">gst_segment_to_stream_time</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-segment-to-stream-time-full"><link linkend="gst-segment-to-stream-time-full">gst_segment_to_stream_time_full</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>T</title>
+<indexentry><primaryie linkends="GST-TAG-CONDUCTOR:CAPS"><link linkend="GST-TAG-CONDUCTOR:CAPS">GST_TAG_CONDUCTOR</link>, macro in <link linkend="GstTagList">GstTagList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-TAG-PRIVATE-DATA:CAPS"><link linkend="GST-TAG-PRIVATE-DATA:CAPS">GST_TAG_PRIVATE_DATA</link>, macro in <link linkend="GstTagList">GstTagList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstTracerFactory-struct"><link linkend="GstTracerFactory-struct">GstTracerFactory</link>, struct in <link linkend="GstTracerFactory">GstTracerFactory</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstTracerValueScope"><link linkend="GstTracerValueScope">GstTracerValueScope</link>, enum in <link linkend="GstTracerRecord">GstTracerRecord</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-tracer-factory-get-list"><link linkend="gst-tracer-factory-get-list">gst_tracer_factory_get_list</link>, function in <link linkend="GstTracerFactory">GstTracerFactory</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

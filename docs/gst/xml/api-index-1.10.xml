@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.10">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="GstBin-deep-element-added"><link linkend="GstBin-deep-element-added">GstBin::deep-element-added</link>, object signal in <link linkend="GstBin">GstBin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstBin-deep-element-removed"><link linkend="GstBin-deep-element-removed">GstBin::deep-element-removed</link>, object signal in <link linkend="GstBin">GstBin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-bin-get-suppressed-flags"><link linkend="gst-bin-get-suppressed-flags">gst_bin_get_suppressed_flags</link>, function in <link linkend="GstBin">GstBin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-bin-set-suppressed-flags"><link linkend="gst-bin-set-suppressed-flags">gst_bin_set_suppressed_flags</link>, function in <link linkend="GstBin">GstBin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-get-flags"><link linkend="gst-buffer-get-flags">gst_buffer_get_flags</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-set-flags"><link linkend="gst-buffer-set-flags">gst_buffer_set_flags</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-unset-flags"><link linkend="gst-buffer-unset-flags">gst_buffer_unset_flags</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="gst-element-add-property-deep-notify-watch"><link linkend="gst-element-add-property-deep-notify-watch">gst_element_add_property_deep_notify_watch</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-add-property-notify-watch"><link linkend="gst-element-add-property-notify-watch">gst_element_add_property_notify_watch</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-call-async"><link linkend="gst-element-call-async">gst_element_call_async</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-ELEMENT-ERROR-WITH-DETAILS:CAPS"><link linkend="GST-ELEMENT-ERROR-WITH-DETAILS:CAPS">GST_ELEMENT_ERROR_WITH_DETAILS</link>, macro in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-ELEMENT-FLOW-ERROR:CAPS"><link linkend="GST-ELEMENT-FLOW-ERROR:CAPS">GST_ELEMENT_FLOW_ERROR</link>, macro in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-ELEMENT-INFO-WITH-DETAILS:CAPS"><link linkend="GST-ELEMENT-INFO-WITH-DETAILS:CAPS">GST_ELEMENT_INFO_WITH_DETAILS</link>, macro in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-message-full-with-details"><link linkend="gst-element-message-full-with-details">gst_element_message_full_with_details</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-element-remove-property-notify-watch"><link linkend="gst-element-remove-property-notify-watch">gst_element_remove_property_notify_watch</link>, function in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-ELEMENT-WARNING-WITH-DETAILS:CAPS"><link linkend="GST-ELEMENT-WARNING-WITH-DETAILS:CAPS">GST_ELEMENT_WARNING_WITH_DETAILS</link>, macro in <link linkend="GstElement">GstElement</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-new-select-streams"><link linkend="gst-event-new-select-streams">gst_event_new_select_streams</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-new-stream-collection"><link linkend="gst-event-new-stream-collection">gst_event_new_stream_collection</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-new-stream-group-done"><link linkend="gst-event-new-stream-group-done">gst_event_new_stream_group_done</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-parse-select-streams"><link linkend="gst-event-parse-select-streams">gst_event_parse_select_streams</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-parse-stream"><link linkend="gst-event-parse-stream">gst_event_parse_stream</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-parse-stream-collection"><link linkend="gst-event-parse-stream-collection">gst_event_parse_stream_collection</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-parse-stream-group-done"><link linkend="gst-event-parse-stream-group-done">gst_event_parse_stream_group_done</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-set-stream"><link linkend="gst-event-set-stream">gst_event_set_stream</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="gst-message-add-redirect-entry"><link linkend="gst-message-add-redirect-entry">gst_message_add_redirect_entry</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-get-num-redirect-entries"><link linkend="gst-message-get-num-redirect-entries">gst_message_get_num_redirect_entries</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-error-with-details"><link linkend="gst-message-new-error-with-details">gst_message_new_error_with_details</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-info-with-details"><link linkend="gst-message-new-info-with-details">gst_message_new_info_with_details</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-property-notify"><link linkend="gst-message-new-property-notify">gst_message_new_property_notify</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-redirect"><link linkend="gst-message-new-redirect">gst_message_new_redirect</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-streams-selected"><link linkend="gst-message-new-streams-selected">gst_message_new_streams_selected</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-stream-collection"><link linkend="gst-message-new-stream-collection">gst_message_new_stream_collection</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-new-warning-with-details"><link linkend="gst-message-new-warning-with-details">gst_message_new_warning_with_details</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-error-details"><link linkend="gst-message-parse-error-details">gst_message_parse_error_details</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-info-details"><link linkend="gst-message-parse-info-details">gst_message_parse_info_details</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-property-notify"><link linkend="gst-message-parse-property-notify">gst_message_parse_property_notify</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-redirect-entry"><link linkend="gst-message-parse-redirect-entry">gst_message_parse_redirect_entry</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-streams-selected"><link linkend="gst-message-parse-streams-selected">gst_message_parse_streams_selected</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-stream-collection"><link linkend="gst-message-parse-stream-collection">gst_message_parse_stream_collection</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-warning-details"><link linkend="gst-message-parse-warning-details">gst_message_parse_warning_details</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-streams-selected-add"><link linkend="gst-message-streams-selected-add">gst_message_streams_selected_add</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-streams-selected-get-size"><link linkend="gst-message-streams-selected-get-size">gst_message_streams_selected_get_size</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-streams-selected-get-stream"><link linkend="gst-message-streams-selected-get-stream">gst_message_streams_selected_get_stream</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="gst-pad-get-stream"><link linkend="gst-pad-get-stream">gst_pad_get_stream</link>, function in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-pad-link-maybe-ghosting"><link linkend="gst-pad-link-maybe-ghosting">gst_pad_link_maybe_ghosting</link>, function in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-pad-link-maybe-ghosting-full"><link linkend="gst-pad-link-maybe-ghosting-full">gst_pad_link_maybe_ghosting_full</link>, function in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="GstStream"><link linkend="GstStream">GstStream</link>, struct in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstStreamCollection"><link linkend="GstStreamCollection">GstStreamCollection</link>, struct in <link linkend="gstreamer-GstStreamCollection">GstStreamCollection</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstStreamType"><link linkend="GstStreamType">GstStreamType</link>, enum in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-collection-add-stream"><link linkend="gst-stream-collection-add-stream">gst_stream_collection_add_stream</link>, function in <link linkend="gstreamer-GstStreamCollection">GstStreamCollection</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-collection-get-size"><link linkend="gst-stream-collection-get-size">gst_stream_collection_get_size</link>, function in <link linkend="gstreamer-GstStreamCollection">GstStreamCollection</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-collection-get-stream"><link linkend="gst-stream-collection-get-stream">gst_stream_collection_get_stream</link>, function in <link linkend="gstreamer-GstStreamCollection">GstStreamCollection</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-collection-get-upstream-id"><link linkend="gst-stream-collection-get-upstream-id">gst_stream_collection_get_upstream_id</link>, function in <link linkend="gstreamer-GstStreamCollection">GstStreamCollection</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-collection-new"><link linkend="gst-stream-collection-new">gst_stream_collection_new</link>, function in <link linkend="gstreamer-GstStreamCollection">GstStreamCollection</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-get-caps"><link linkend="gst-stream-get-caps">gst_stream_get_caps</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-get-stream-flags"><link linkend="gst-stream-get-stream-flags">gst_stream_get_stream_flags</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-get-stream-id"><link linkend="gst-stream-get-stream-id">gst_stream_get_stream_id</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-get-stream-type"><link linkend="gst-stream-get-stream-type">gst_stream_get_stream_type</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-get-tags"><link linkend="gst-stream-get-tags">gst_stream_get_tags</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-new"><link linkend="gst-stream-new">gst_stream_new</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-set-caps"><link linkend="gst-stream-set-caps">gst_stream_set_caps</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-set-stream-flags"><link linkend="gst-stream-set-stream-flags">gst_stream_set_stream_flags</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-set-stream-type"><link linkend="gst-stream-set-stream-type">gst_stream_set_stream_type</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-set-tags"><link linkend="gst-stream-set-tags">gst_stream_set_tags</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-stream-type-get-name"><link linkend="gst-stream-type-get-name">gst_stream_type_get_name</link>, function in <link linkend="gstreamer-GstStream">GstStream</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

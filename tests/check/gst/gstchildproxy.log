@@ -1,0 +1,4 @@
+Running suite(s): GstChildProxy
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite gst_child_proxy ran in 0.002s (tests failed: 0)
+PASS gst/gstchildproxy (exit status: 0)

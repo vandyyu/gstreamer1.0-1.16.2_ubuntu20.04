@@ -1,0 +1,4 @@
+Running suite(s): protection library
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite protection ran in 0.004s (tests failed: 0)
+PASS gst/gstprotection (exit status: 0)

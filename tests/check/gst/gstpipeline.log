@@ -1,0 +1,4 @@
+Running suite(s): GstPipeline
+100%: Checks: 11, Failures: 0, Errors: 0
+Check suite gst_pipeline ran in 0.206s (tests failed: 0)
+PASS gst/gstpipeline (exit status: 0)

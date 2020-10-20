@@ -1,0 +1,4 @@
+Running suite(s): GstDateTime
+100%: Checks: 15, Failures: 0, Errors: 0
+Check suite gst_date_time ran in 0.010s (tests failed: 0)
+PASS gst/gstdatetime (exit status: 0)

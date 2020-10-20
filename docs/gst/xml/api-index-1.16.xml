@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.16">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-buffer-list-replace"><link linkend="gst-buffer-list-replace">gst_buffer_list_replace</link>, function in <link linkend="GstBufferList">GstBufferList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-list-take"><link linkend="gst-buffer-list-take">gst_buffer_list_take</link>, function in <link linkend="GstBufferList">GstBufferList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-buffer-new-wrapped-bytes"><link linkend="gst-buffer-new-wrapped-bytes">gst_buffer_new_wrapped_bytes</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="gst-caps-copy-nth"><link linkend="gst-caps-copy-nth">gst_caps_copy_nth</link>, function in <link linkend="GstCaps">GstCaps</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-caps-set-features-simple"><link linkend="gst-caps-set-features-simple">gst_caps_set_features_simple</link>, function in <link linkend="GstCaps">GstCaps</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-buffer-list"><link linkend="gst-clear-buffer-list">gst_clear_buffer_list</link>, function in <link linkend="GstBufferList">GstBufferList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-caps"><link linkend="gst-clear-caps">gst_clear_caps</link>, function in <link linkend="GstCaps">GstCaps</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-message"><link linkend="gst-clear-message">gst_clear_message</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-mini-object"><link linkend="gst-clear-mini-object">gst_clear_mini_object</link>, function in <link linkend="gstreamer-GstMiniObject">GstMiniObject</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-object"><link linkend="gst-clear-object">gst_clear_object</link>, function in <link linkend="GstObject">GstObject</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-query"><link linkend="gst-clear-query">gst_clear_query</link>, function in <link linkend="GstQuery">GstQuery</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clear-tag-list"><link linkend="gst-clear-tag-list">gst_clear_tag_list</link>, function in <link linkend="GstTagList">GstTagList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clock-id-get-clock"><link linkend="gst-clock-id-get-clock">gst_clock_id_get_clock</link>, function in <link linkend="GstClock">GstClock</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-clock-id-uses-clock"><link linkend="gst-clock-id-uses-clock">gst_clock_id_uses_clock</link>, function in <link linkend="GstClock">GstClock</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="gst-device-provider-device-changed"><link linkend="gst-device-provider-device-changed">gst_device_provider_device_changed</link>, function in <link linkend="gstreamer-GstDeviceProvider">GstDeviceProvider</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="gst-event-parse-seek-trickmode-interval"><link linkend="gst-event-parse-seek-trickmode-interval">gst_event_parse_seek_trickmode_interval</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-event-set-seek-trickmode-interval"><link linkend="gst-event-set-seek-trickmode-interval">gst_event_set_seek_trickmode_interval</link>, function in <link linkend="GstEvent">GstEvent</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="gst-message-new-device-changed"><link linkend="gst-message-new-device-changed">gst_message_new_device_changed</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-parse-device-changed"><link linkend="gst-message-parse-device-changed">gst_message_parse_device_changed</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-message-take"><link linkend="gst-message-take">gst_message_take</link>, function in <link linkend="GstMessage">GstMessage</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-meta-compare-seqnum"><link linkend="gst-meta-compare-seqnum">gst_meta_compare_seqnum</link>, function in <link linkend="gstreamer-GstMeta">GstMeta</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-meta-get-seqnum"><link linkend="gst-meta-get-seqnum">gst_meta_get_seqnum</link>, function in <link linkend="gstreamer-GstMeta">GstMeta</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mini-object-add-parent"><link linkend="gst-mini-object-add-parent">gst_mini_object_add_parent</link>, function in <link linkend="gstreamer-GstMiniObject">GstMiniObject</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mini-object-remove-parent"><link linkend="gst-mini-object-remove-parent">gst_mini_object_remove_parent</link>, function in <link linkend="gstreamer-GstMiniObject">GstMiniObject</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="GST-PROTECTION-UNSPECIFIED-SYSTEM-ID:CAPS"><link linkend="GST-PROTECTION-UNSPECIFIED-SYSTEM-ID:CAPS">GST_PROTECTION_UNSPECIFIED_SYSTEM_ID</link>, macro in <link linkend="gstreamer-GstProtectionMeta">GstProtectionMeta</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>Q</title>
+<indexentry><primaryie linkends="gst-query-new-bitrate"><link linkend="gst-query-new-bitrate">gst_query_new_bitrate</link>, function in <link linkend="GstQuery">GstQuery</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-query-parse-bitrate"><link linkend="gst-query-parse-bitrate">gst_query_parse_bitrate</link>, function in <link linkend="GstQuery">GstQuery</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-query-set-bitrate"><link linkend="gst-query-set-bitrate">gst_query_set_bitrate</link>, function in <link linkend="GstQuery">GstQuery</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-query-take"><link linkend="gst-query-take">gst_query_take</link>, function in <link linkend="GstQuery">GstQuery</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="gst-sample-is-writable"><link linkend="gst-sample-is-writable">gst_sample_is_writable</link>, macro in <link linkend="GstSample">GstSample</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-sample-make-writable"><link linkend="gst-sample-make-writable">gst_sample_make_writable</link>, macro in <link linkend="GstSample">GstSample</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-sample-set-buffer"><link linkend="gst-sample-set-buffer">gst_sample_set_buffer</link>, function in <link linkend="GstSample">GstSample</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-sample-set-caps"><link linkend="gst-sample-set-caps">gst_sample_set_caps</link>, function in <link linkend="GstSample">GstSample</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-sample-set-info"><link linkend="gst-sample-set-info">gst_sample_set_info</link>, function in <link linkend="GstSample">GstSample</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-sample-set-segment"><link linkend="gst-sample-set-segment">gst_sample_set_segment</link>, function in <link linkend="GstSample">GstSample</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>T</title>
+<indexentry><primaryie linkends="gst-tag-list-replace"><link linkend="gst-tag-list-replace">gst_tag_list_replace</link>, function in <link linkend="GstTagList">GstTagList</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-tag-list-take"><link linkend="gst-tag-list-take">gst_tag_list_take</link>, function in <link linkend="GstTagList">GstTagList</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

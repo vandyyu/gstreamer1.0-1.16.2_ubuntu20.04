@@ -1,0 +1,4 @@
+Running suite(s): GstByteReader
+100%: Checks: 12, Failures: 0, Errors: 0
+Check suite gst_byte_reader ran in 0.037s (tests failed: 0)
+PASS libs/bytereader-noinline (exit status: 0)

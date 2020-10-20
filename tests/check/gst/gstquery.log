@@ -1,0 +1,4 @@
+Running suite(s): GstQuery
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite gst_query ran in 0.004s (tests failed: 0)
+PASS gst/gstquery (exit status: 0)

@@ -1,0 +1,4 @@
+Running suite(s): capsfilter
+100%: Checks: 6, Failures: 0, Errors: 0
+Check suite capsfilter ran in 0.011s (tests failed: 0)
+PASS elements/capsfilter (exit status: 0)

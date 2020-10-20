@@ -1,0 +1,4 @@
+Running suite(s): Gst
+100%: Checks: 6, Failures: 0, Errors: 0
+Check suite gst ran in 0.008s (tests failed: 0)
+PASS gst/gst (exit status: 0)

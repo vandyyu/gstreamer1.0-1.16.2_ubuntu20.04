@@ -1,0 +1,4 @@
+Running suite(s): GstBuffer
+100%: Checks: 18, Failures: 0, Errors: 0
+Check suite gst_buffer ran in 0.029s (tests failed: 0)
+PASS gst/gstbuffer (exit status: 0)

@@ -1,0 +1,4 @@
+Running suite(s): GstBitReader
+100%: Checks: 3, Failures: 0, Errors: 0
+Check suite gst_bit_reader ran in 0.002s (tests failed: 0)
+PASS libs/bitreader (exit status: 0)

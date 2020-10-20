@@ -1,0 +1,260 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gstreamer-plugins-identity">
+<refmeta>
+<refentrytitle id="gstreamer-plugins-identity.top_of_page" role="top_of_page">identity</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>identity</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gstreamer-plugins-identity.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--check-imperfect-offset">check-imperfect-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--check-imperfect-timestamp">check-imperfect-timestamp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstIdentity--datarate">datarate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstIdentity--drop-probability">drop-probability</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--dump">dump</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstIdentity--error-after">error-after</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstIdentity--last-message">last-message</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--signal-handoffs">signal-handoffs</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--silent">silent</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--single-segment">single-segment</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstIdentity--sleep-time">sleep-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--sync">sync</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstBufferFlags"><type>GstBufferFlags</type></link></entry><entry role="property_name"><link linkend="GstIdentity--drop-buffer-flags">drop-buffer-flags</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstIdentity--ts-offset">ts-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstIdentity--drop-allocation">drop-allocation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstIdentity--eos-after">eos-after</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gstreamer-plugins-identity.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signal_proto_type" colwidth="150px"/>
+<colspec colname="signal_proto_name" colwidth="300px"/>
+<colspec colname="signal_proto_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstIdentity-handoff">handoff</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstIdentity"/><refsect1 id="gstreamer-plugins-identity.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstIdentity-struct">GstIdentity</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gstreamer-plugins-identity.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> GstIdentity
+</screen>
+</refsect1>
+
+
+<refsect1 id="gstreamer-plugins-identity.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Dummy element that passes incoming data through unmodified. It has some
+useful diagnostic functions, such as offset and timestamp checking.</para>
+
+<include href="element-identity-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gstreamer-plugins-identity.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gstreamer-plugins-identity.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstIdentity-struct" role="struct">
+<title>struct GstIdentity</title>
+<indexterm zone="GstIdentity-struct"><primary>GstIdentity</primary></indexterm>
+<programlisting language="C">struct GstIdentity;</programlisting>
+<para>Opaque <link linkend="GstIdentity"><type>GstIdentity</type></link> data structure</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gstreamer-plugins-identity.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstIdentity--check-imperfect-offset" role="property"><title>The <literal>“check-imperfect-offset”</literal> property</title>
+<indexterm zone="GstIdentity--check-imperfect-offset"><primary>GstIdentity:check-imperfect-offset</primary></indexterm>
+<programlisting>  “check-imperfect-offset”   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Send element messages if offset and offset_end do not match up.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstIdentity--check-imperfect-timestamp" role="property"><title>The <literal>“check-imperfect-timestamp”</literal> property</title>
+<indexterm zone="GstIdentity--check-imperfect-timestamp"><primary>GstIdentity:check-imperfect-timestamp</primary></indexterm>
+<programlisting>  “check-imperfect-timestamp” <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Send element messages if timestamps and durations do not match up.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstIdentity--datarate" role="property"><title>The <literal>“datarate”</literal> property</title>
+<indexterm zone="GstIdentity--datarate"><primary>GstIdentity:datarate</primary></indexterm>
+<programlisting>  “datarate”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(Re)timestamps buffers with number of bytes per second (0 = inactive).</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstIdentity--drop-probability" role="property"><title>The <literal>“drop-probability”</literal> property</title>
+<indexterm zone="GstIdentity--drop-probability"><primary>GstIdentity:drop-probability</primary></indexterm>
+<programlisting>  “drop-probability”         <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>The Probability a buffer is dropped.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstIdentity--dump" role="property"><title>The <literal>“dump”</literal> property</title>
+<indexterm zone="GstIdentity--dump"><primary>GstIdentity:dump</primary></indexterm>
+<programlisting>  “dump”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Dump buffer contents to stdout.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstIdentity--error-after" role="property"><title>The <literal>“error-after”</literal> property</title>
+<indexterm zone="GstIdentity--error-after"><primary>GstIdentity:error-after</primary></indexterm>
+<programlisting>  “error-after”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Error after N buffers.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstIdentity--last-message" role="property"><title>The <literal>“last-message”</literal> property</title>
+<indexterm zone="GstIdentity--last-message"><primary>GstIdentity:last-message</primary></indexterm>
+<programlisting>  “last-message”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>last-message.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstIdentity--signal-handoffs" role="property"><title>The <literal>“signal-handoffs”</literal> property</title>
+<indexterm zone="GstIdentity--signal-handoffs"><primary>GstIdentity:signal-handoffs</primary></indexterm>
+<programlisting>  “signal-handoffs”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If set to <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>, the identity will emit a handoff signal when handling a buffer.
+When set to <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>, no signal will be emitted, which might improve performance.</para>
+<para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstIdentity--silent" role="property"><title>The <literal>“silent”</literal> property</title>
+<indexterm zone="GstIdentity--silent"><primary>GstIdentity:silent</primary></indexterm>
+<programlisting>  “silent”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>silent.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstIdentity--single-segment" role="property"><title>The <literal>“single-segment”</literal> property</title>
+<indexterm zone="GstIdentity--single-segment"><primary>GstIdentity:single-segment</primary></indexterm>
+<programlisting>  “single-segment”           <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Timestamp buffers and eat segments so as to appear as one segment.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstIdentity--sleep-time" role="property"><title>The <literal>“sleep-time”</literal> property</title>
+<indexterm zone="GstIdentity--sleep-time"><primary>GstIdentity:sleep-time</primary></indexterm>
+<programlisting>  “sleep-time”               <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Microseconds to sleep between processing.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstIdentity--sync" role="property"><title>The <literal>“sync”</literal> property</title>
+<indexterm zone="GstIdentity--sync"><primary>GstIdentity:sync</primary></indexterm>
+<programlisting>  “sync”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Synchronize to pipeline clock.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstIdentity--drop-buffer-flags" role="property"><title>The <literal>“drop-buffer-flags”</literal> property</title>
+<indexterm role="1.8" zone="GstIdentity--drop-buffer-flags"><primary>GstIdentity:drop-buffer-flags</primary></indexterm>
+<programlisting>  “drop-buffer-flags”        <link linkend="GstBufferFlags"><type>GstBufferFlags</type></link></programlisting>
+<para>Drop buffers with the given flags.</para>
+<para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstIdentity--ts-offset" role="property"><title>The <literal>“ts-offset”</literal> property</title>
+<indexterm zone="GstIdentity--ts-offset"><primary>GstIdentity:ts-offset</primary></indexterm>
+<programlisting>  “ts-offset”                <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Timestamp offset in nanoseconds for synchronisation, negative for earlier sync.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstIdentity--drop-allocation" role="property"><title>The <literal>“drop-allocation”</literal> property</title>
+<indexterm zone="GstIdentity--drop-allocation"><primary>GstIdentity:drop-allocation</primary></indexterm>
+<programlisting>  “drop-allocation”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Don't forward allocation queries.</para><para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstIdentity--eos-after" role="property"><title>The <literal>“eos-after”</literal> property</title>
+<indexterm role="1.16" zone="GstIdentity--eos-after"><primary>GstIdentity:eos-after</primary></indexterm>
+<programlisting>  “eos-after”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>EOS after N buffers.</para>
+<para>Owner: GstIdentity</para>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+<para role="since">Since: <link linkend="api-index-1.16">1.16</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gstreamer-plugins-identity.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstIdentity-handoff" role="signal"><title>The <literal>“handoff”</literal> signal</title>
+<indexterm zone="GstIdentity-handoff"><primary>GstIdentity::handoff</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstIdentity"><type>GstIdentity</type></link> *identity,
+               <link linkend="GstBuffer"><type>GstBuffer</type></link>   *buffer,
+               <link linkend="gpointer"><type>gpointer</type></link>     user_data)</programlisting>
+<para>This signal gets emitted before passing the buffer downstream.</para>
+<refsect3 id="GstIdentity-handoff.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>identity</para></entry>
+<entry role="parameter_description"><para>the identity instance</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>the buffer that just has been received</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad that received it</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

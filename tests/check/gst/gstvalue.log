@@ -1,0 +1,4 @@
+Running suite(s): GstValue
+100%: Checks: 45, Failures: 0, Errors: 0
+Check suite gst_value ran in 0.027s (tests failed: 0)
+PASS gst/gstvalue (exit status: 0)

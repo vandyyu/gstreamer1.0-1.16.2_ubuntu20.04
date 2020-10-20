@@ -1,0 +1,4 @@
+Running suite(s): fakesrc
+100%: Checks: 6, Failures: 0, Errors: 0
+Check suite fakesrc ran in 0.015s (tests failed: 0)
+PASS elements/fakesrc (exit status: 0)

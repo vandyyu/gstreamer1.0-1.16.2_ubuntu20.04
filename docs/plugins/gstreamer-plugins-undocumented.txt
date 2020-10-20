@@ -1,0 +1,34 @@
+89% symbol docs coverage.
+216 symbols documented.
+0 symbols incomplete.
+27 not documented.
+
+
+GstDataURISrc
+GstDownloadBuffer
+GstInputSelector
+GstOutputSelector
+GstQueue2
+GstQueue2::overrun
+
+element-capsfilter:short_description
+element-concat:short_description
+element-dataurisrc:short_description
+element-downloadbuffer:short_description
+element-fakesink:short_description
+element-fakesrc:short_description
+element-fdsink:short_description
+element-fdsrc:short_description
+element-filesink:short_description
+element-filesrc:short_description
+element-funnel:short_description
+element-identity:short_description
+element-input-selector:short_description
+element-multiqueue:short_description
+element-output-selector:short_description
+element-queue2:short_description
+element-queue:short_description
+element-streamiddemux:short_description
+element-tee:short_description
+element-typefind:short_description
+element-valve:short_description

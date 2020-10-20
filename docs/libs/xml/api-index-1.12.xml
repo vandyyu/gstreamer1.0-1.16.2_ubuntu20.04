@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.12">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-base-parse-drain"><link linkend="gst-base-parse-drain">gst_base_parse_drain</link>, function in <link linkend="GstBaseParse">GstBaseParse</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-base-sink-get-drop-out-of-segment"><link linkend="gst-base-sink-get-drop-out-of-segment">gst_base_sink_get_drop_out_of_segment</link>, function in <link linkend="GstBaseSink">GstBaseSink</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-base-sink-set-drop-out-of-segment"><link linkend="gst-base-sink-set-drop-out-of-segment">gst_base_sink_set_drop_out_of_segment</link>, function in <link linkend="GstBaseSink">GstBaseSink</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="GstCheckLogFilterFunc"><link linkend="GstCheckLogFilterFunc">GstCheckLogFilterFunc</link>, user_function in <link linkend="gstreamer-libs-GstCheck">GstCheck</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-check-add-log-filter"><link linkend="gst-check-add-log-filter">gst_check_add_log_filter</link>, function in <link linkend="gstreamer-libs-GstCheck">GstCheck</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-check-clear-log-filter"><link linkend="gst-check-clear-log-filter">gst_check_clear_log_filter</link>, function in <link linkend="gstreamer-libs-GstCheck">GstCheck</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-check-remove-log-filter"><link linkend="gst-check-remove-log-filter">gst_check_remove_log_filter</link>, function in <link linkend="gstreamer-libs-GstCheck">GstCheck</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="gst-proxy-control-binding-new"><link linkend="gst-proxy-control-binding-new">gst_proxy_control_binding_new</link>, function in <link linkend="gstreamer-libs-GstProxyControlBinding">GstProxyControlBinding</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

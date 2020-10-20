@@ -1,0 +1,4 @@
+Running suite(s): GstBaseSrc
+100%: Checks: 10, Failures: 0, Errors: 0
+Check suite gst_basesrc ran in 0.020s (tests failed: 0)
+PASS libs/basesrc (exit status: 0)

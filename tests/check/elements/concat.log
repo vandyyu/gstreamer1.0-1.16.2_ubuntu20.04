@@ -1,0 +1,4 @@
+Running suite(s): concat
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite concat ran in 0.016s (tests failed: 0)
+PASS elements/concat (exit status: 0)

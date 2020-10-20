@@ -1,0 +1,4 @@
+Running suite(s): GstMeta
+100%: Checks: 10, Failures: 0, Errors: 0
+Check suite gst_buffermeta ran in 0.015s (tests failed: 0)
+PASS gst/gstmeta (exit status: 0)

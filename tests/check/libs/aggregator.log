@@ -1,0 +1,4 @@
+Running suite(s): GstAggregator
+100%: Checks: 15, Failures: 0, Errors: 0
+Check suite gst_aggregator ran in 2.000s (tests failed: 0)
+PASS libs/aggregator (exit status: 0)

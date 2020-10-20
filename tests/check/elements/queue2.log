@@ -1,0 +1,4 @@
+Running suite(s): queue2
+100%: Checks: 10, Failures: 0, Errors: 0
+Check suite queue2 ran in 1.075s (tests failed: 0)
+PASS elements/queue2 (exit status: 0)

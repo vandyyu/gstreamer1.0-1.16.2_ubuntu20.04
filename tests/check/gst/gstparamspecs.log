@@ -1,0 +1,4 @@
+Running suite(s): GstParamSpec
+100%: Checks: 1, Failures: 0, Errors: 0
+Check suite gst_param_spec ran in 0.003s (tests failed: 0)
+PASS gst/gstparamspecs (exit status: 0)

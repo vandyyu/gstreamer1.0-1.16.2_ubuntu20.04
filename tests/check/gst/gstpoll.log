@@ -1,0 +1,4 @@
+Running suite(s): GstPoll
+100%: Checks: 6, Failures: 0, Errors: 0
+Check suite gst_poll ran in 5.075s (tests failed: 0)
+PASS gst/gstpoll (exit status: 0)

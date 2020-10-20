@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-deprecated">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="GST-CLOCK-ENTRY-CLOCK:CAPS"><link linkend="GST-CLOCK-ENTRY-CLOCK:CAPS">GST_CLOCK_ENTRY_CLOCK</link>, macro in <link linkend="GstClock">GstClock</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="GST-META-TAG-MEMORY:CAPS"><link linkend="GST-META-TAG-MEMORY:CAPS">GST_META_TAG_MEMORY</link>, macro in <link linkend="gstreamer-GstMeta">GstMeta</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>O</title>
+<indexentry><primaryie linkends="gst-object-has-ancestor"><link linkend="gst-object-has-ancestor">gst_object_has_ancestor</link>, function in <link linkend="GstObject">GstObject</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="gst-segment-to-position"><link linkend="gst-segment-to-position">gst_segment_to_position</link>, function in <link linkend="GstSegment">GstSegment</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>T</title>
+<indexentry><primaryie linkends="gst-tag-list-free"><link linkend="gst-tag-list-free">gst_tag_list_free</link>, macro in <link linkend="GstTagList">GstTagList</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>U</title>
+<indexentry><primaryie linkends="gst-uri-construct"><link linkend="gst-uri-construct">gst_uri_construct</link>, function in <link linkend="gstreamer-GstUriHandler">GstUriHandler</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

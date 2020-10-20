@@ -1,0 +1,4 @@
+Running suite(s): GstElement
+100%: Checks: 9, Failures: 0, Errors: 0
+Check suite gst_element ran in 3.597s (tests failed: 0)
+PASS gst/gstelement (exit status: 0)

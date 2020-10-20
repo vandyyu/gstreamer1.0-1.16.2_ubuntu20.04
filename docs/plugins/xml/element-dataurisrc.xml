@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gstreamer-plugins-dataurisrc">
+<refmeta>
+<refentrytitle id="gstreamer-plugins-dataurisrc.top_of_page" role="top_of_page">dataurisrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dataurisrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gstreamer-plugins-dataurisrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDataURISrc--uri">uri</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDataURISrc"/><refsect1 id="gstreamer-plugins-dataurisrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDataURISrc-struct">GstDataURISrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gstreamer-plugins-dataurisrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> GstDataURISrc
+</screen>
+</refsect1>
+<refsect1 id="gstreamer-plugins-dataurisrc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstDataURISrc implements
+ <link linkend="GstURIHandler">GstURIHandler</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gstreamer-plugins-dataurisrc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>dataurisrc handles data: URIs, see <ulink url="http://tools.ietf.org/html/rfc2397">RFC 2397</ulink> for more information.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting role="example"><![CDATA[
+gst-launch-1.0 -v dataurisrc uri="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAfElEQVQ4je2MwQnAIAxFgziA4EnczIsO4MEROo/gzZWc4xdTbe1R6LGRR74heYS7iKElzfcMiRnt4hf8gk8EayB6luefue/HzlJfCA50XsNjYRxprZmenXNIKSGEsC+QUqK1hhgj521BzhnWWiilUGvdF5RS4L2HMQZCCJy8sHMm2TYdJAAAAABJRU5ErkJggg==" ! pngdec ! videoconvert ! imagefreeze ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+<para>This pipeline displays a small 16x16 PNG image from the data URI.</para>
+</refsect3>
+
+<include href="element-dataurisrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gstreamer-plugins-dataurisrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gstreamer-plugins-dataurisrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDataURISrc-struct" role="struct">
+<title>struct GstDataURISrc</title>
+<indexterm zone="GstDataURISrc-struct"><primary>GstDataURISrc</primary></indexterm>
+<programlisting language="C">struct GstDataURISrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gstreamer-plugins-dataurisrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDataURISrc--uri" role="property"><title>The <literal>“uri”</literal> property</title>
+<indexterm zone="GstDataURISrc--uri"><primary>GstDataURISrc:uri</primary></indexterm>
+<programlisting>  “uri”                      <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>URI that should be used.</para><para>Owner: GstDataURISrc</para>
+<para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

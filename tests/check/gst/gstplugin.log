@@ -1,0 +1,4 @@
+Running suite(s): GstPlugin
+100%: Checks: 8, Failures: 0, Errors: 0
+Check suite gst_plugin ran in 0.005s (tests failed: 0)
+PASS gst/gstplugin (exit status: 0)

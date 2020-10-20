@@ -1,0 +1,4 @@
+Running suite(s): GstBaseParse
+100%: Checks: 5, Failures: 0, Errors: 0
+Check suite gst_baseparse ran in 0.056s (tests failed: 0)
+PASS libs/baseparse (exit status: 0)

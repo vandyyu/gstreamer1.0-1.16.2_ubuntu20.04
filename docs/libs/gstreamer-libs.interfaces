@@ -1,0 +1,3 @@
+GstBin GstChildProxy
+GstPipeline GstChildProxy
+GstNetTimeProvider GInitable

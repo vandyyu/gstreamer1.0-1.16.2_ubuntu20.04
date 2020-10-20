@@ -1,0 +1,4 @@
+Running suite(s): GstBufferPool
+100%: Checks: 9, Failures: 0, Errors: 0
+Check suite gst_buffer_pool ran in 0.015s (tests failed: 0)
+PASS gst/gstbufferpool (exit status: 0)

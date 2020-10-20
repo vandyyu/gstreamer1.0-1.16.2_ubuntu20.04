@@ -1,0 +1,4 @@
+Running suite(s): gst-inspect
+100%: Checks: 1, Failures: 0, Errors: 0
+Check suite gstabi ran in 0.004s (tests failed: 0)
+PASS tools/gstinspect (exit status: 0)

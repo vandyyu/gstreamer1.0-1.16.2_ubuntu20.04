@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.14">
+<indexdiv><title>A</title>
+<indexentry><primaryie linkends="GstAggregator-struct"><link linkend="GstAggregator-struct">GstAggregator</link>, struct in <link linkend="GstAggregator">GstAggregator</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstAggregatorClass"><link linkend="GstAggregatorClass">GstAggregatorClass</link>, struct in <link linkend="GstAggregator">GstAggregator</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstAggregatorPad-struct"><link linkend="GstAggregatorPad-struct">GstAggregatorPad</link>, struct in <link linkend="GstAggregatorPad">GstAggregatorPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstAggregatorPadClass"><link linkend="GstAggregatorPadClass">GstAggregatorPadClass</link>, struct in <link linkend="GstAggregatorPad">GstAggregatorPad</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-base-src-submit-buffer-list"><link linkend="gst-base-src-submit-buffer-list">gst_base_src_submit_buffer_list</link>, function in <link linkend="GstBaseSrc">GstBaseSrc</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>H</title>
+<indexentry><primaryie linkends="gst-harness-take-all-data"><link linkend="gst-harness-take-all-data">gst_harness_take_all_data</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-harness-take-all-data-as-buffer"><link linkend="gst-harness-take-all-data-as-buffer">gst_harness_take_all_data_as_buffer</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-harness-take-all-data-as-bytes"><link linkend="gst-harness-take-all-data-as-bytes">gst_harness_take_all_data_as_bytes</link>, function in <link linkend="gstreamer-libs-GstHarness">GstHarness</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>Q</title>
+<indexentry><primaryie linkends="gst-queue-array-peek-tail"><link linkend="gst-queue-array-peek-tail">gst_queue_array_peek_tail</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-queue-array-peek-tail-struct"><link linkend="gst-queue-array-peek-tail-struct">gst_queue_array_peek_tail_struct</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-queue-array-pop-tail"><link linkend="gst-queue-array-pop-tail">gst_queue_array_pop_tail</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-queue-array-pop-tail-struct"><link linkend="gst-queue-array-pop-tail-struct">gst_queue_array_pop_tail_struct</link>, function in <link linkend="gstreamer-libs-GstQueueArray">GstQueueArray</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

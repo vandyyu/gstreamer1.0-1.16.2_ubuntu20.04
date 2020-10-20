@@ -1,0 +1,14 @@
+GST_API
+GST_API_IMPORT
+GST_DEPRECATED
+GST_DEPRECATED_FOR
+GST_DISABLE_CAST_CHECKS
+GST_DISABLE_GLIB_ASSERTS
+GST_DISABLE_GLIB_CHECKS
+gst_clear_buffer
+gst_clear_event
+gst_clear_structure
+gst_poll_fd_ctl_pri
+gst_poll_fd_has_pri
+GstIterator(copy, next, item, resync, free, pushed, type, lock, cookie, master_cookie, size)
+GstMapInfo(user_data)

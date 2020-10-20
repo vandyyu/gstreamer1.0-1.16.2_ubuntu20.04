@@ -1,0 +1,4 @@
+Running suite(s): GstSystemClock
+100%: Checks: 15, Failures: 0, Errors: 0
+Check suite gst_systemclock ran in 12.129s (tests failed: 0)
+PASS gst/gstsystemclock (exit status: 0)

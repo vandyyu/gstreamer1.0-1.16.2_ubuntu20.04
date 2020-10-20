@@ -1,0 +1,122 @@
+96% symbol docs coverage.
+2509 symbols documented.
+39 symbols incomplete.
+110 not documented.
+
+
+Example
+GST_CAPS_FEATURES_ANY
+GST_CAPS_FEATURES_MEMORY_SYSTEM_MEMORY
+GST_CAPS_FEATURE_MEMORY_SYSTEM_MEMORY
+GST_DISABLE_PLUGIN
+GST_ELEMENT_FACTORY_TYPE_DECODER
+GST_ELEMENT_FACTORY_TYPE_DECRYPTOR
+GST_ELEMENT_FACTORY_TYPE_DEMUXER
+GST_ELEMENT_FACTORY_TYPE_DEPAYLOADER
+GST_ELEMENT_FACTORY_TYPE_ENCODER
+GST_ELEMENT_FACTORY_TYPE_ENCRYPTOR
+GST_ELEMENT_FACTORY_TYPE_FORMATTER
+GST_ELEMENT_FACTORY_TYPE_MAX_ELEMENTS
+GST_ELEMENT_FACTORY_TYPE_MEDIA_AUDIO
+GST_ELEMENT_FACTORY_TYPE_MEDIA_IMAGE
+GST_ELEMENT_FACTORY_TYPE_MEDIA_METADATA
+GST_ELEMENT_FACTORY_TYPE_MEDIA_SUBTITLE
+GST_ELEMENT_FACTORY_TYPE_MEDIA_VIDEO
+GST_ELEMENT_FACTORY_TYPE_MUXER
+GST_ELEMENT_FACTORY_TYPE_PARSER
+GST_ELEMENT_FACTORY_TYPE_PAYLOADER
+GST_ELEMENT_FACTORY_TYPE_SINK
+GST_ELEMENT_FACTORY_TYPE_SRC
+GST_ERROR_SYSTEM
+GST_FOURCC_ARGS (<parameters>)
+GST_FOURCC_FORMAT
+GST_PAD_IS_ACTIVE
+GST_PAD_IS_LINKED
+GST_PAD_IS_SINK
+GST_PAD_IS_SRC
+GST_PAD_PROBE_INFO_BUFFER (<parameters>)
+GST_PAD_PROBE_INFO_BUFFER_LIST (<parameters>)
+GST_PAD_PROBE_INFO_DATA (<parameters>)
+GST_PAD_PROBE_INFO_EVENT (<parameters>)
+GST_PAD_PROBE_INFO_FLOW_RETURN (<parameters>)
+GST_PAD_PROBE_INFO_ID (<parameters>)
+GST_PAD_PROBE_INFO_OFFSET (<parameters>)
+GST_PAD_PROBE_INFO_QUERY (<parameters>)
+GST_PAD_PROBE_INFO_SIZE (<parameters>)
+GST_PAD_PROBE_INFO_TYPE (<parameters>)
+GST_PTR_FORMAT
+GST_SEGMENT_FORMAT
+GST_STIME_ARGS (<parameters>)
+GST_STIME_FORMAT
+GST_TIME_ARGS (<parameters>)
+GST_TIME_FORMAT
+GST_URI_CAST (<parameters>)
+GST_URI_CONST_CAST (<parameters>)
+GstCapsFeatures
+GstContext
+GstDebugColorMode
+GstElementCallAsyncFunc (<parameters>)
+GstElementFactoryListType
+GstPromise
+GstPromiseChangeFunc
+GstProxyPad
+GstStackTraceFlags
+GstStreamFlags
+GstToc
+GstTocEntry
+GstTracer
+GstTracerRecord
+GstValueArray
+gst_buffer_get_n_meta
+gst_buffer_get_protection_meta (<parameters>)
+gst_buffer_has_flags (<parameters>)
+gst_date_time_has_day
+gst_date_time_has_month
+gst_date_time_has_second
+gst_date_time_has_time
+gst_date_time_has_year
+gst_debug_get_stack_trace
+gst_device_provider_can_monitor (<parameters>)
+gst_device_provider_device_changed (provider)
+gst_dynamic_type_factory_load (<parameters>)
+gst_dynamic_type_register (<parameters>)
+gst_element_add_property_deep_notify_watch
+gst_element_add_property_notify_watch
+gst_element_remove_property_notify_watch
+gst_event_parse_group_id
+gst_event_parse_seek_trickmode_interval (event)
+gst_event_parse_stream_flags
+gst_event_set_seek_trickmode_interval (event, interval)
+gst_event_set_stream_flags
+gst_info_vasprintf (result, format, args)
+gst_make_element_message_details (<parameters>)
+gst_memory_is_writable (<parameters>)
+gst_memory_lock (<parameters>)
+gst_memory_make_writable (<parameters>)
+gst_memory_unlock (<parameters>)
+gst_message_get_num_redirect_entries
+gst_message_new_device_changed (changed_device)
+gst_message_new_property_notify
+gst_meta_api_type_get_tags
+gst_pad_probe_info_get_buffer
+gst_pad_probe_info_get_buffer_list
+gst_pad_probe_info_get_event
+gst_pad_probe_info_get_query
+gst_promise_new
+gst_toc_dump (<parameters>)
+gst_toc_entry_get_entry_type
+gst_toc_entry_is_alternative
+gst_toc_entry_is_sequence
+gst_toc_entry_make_writable (<parameters>)
+gst_toc_entry_ref (<parameters>)
+gst_toc_entry_unref (<parameters>)
+gst_toc_get_scope
+gst_toc_make_writable (<parameters>)
+gst_toc_ref (<parameters>)
+gst_toc_unref (<parameters>)
+gst_uri_error_quark
+
+gst_tag_list_free (<parameters>)
+
+gststreamcollection:long_description
+gstutils:long_description

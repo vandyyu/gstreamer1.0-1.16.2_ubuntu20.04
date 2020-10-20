@@ -1,0 +1,4 @@
+Running suite(s): GstLibsCpp
+100%: Checks: 2, Failures: 0, Errors: 0
+Check suite libscpp ran in 0.001s (tests failed: 0)
+PASS libs/gstlibscpp (exit status: 0)

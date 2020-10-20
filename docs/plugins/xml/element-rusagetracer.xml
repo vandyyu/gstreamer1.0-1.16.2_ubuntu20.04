@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gstreamer-plugins-rusagetracer">
+<refmeta>
+<refentrytitle role="top_of_page" id="gstreamer-plugins-rusagetracer.top_of_page">rusagetracer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GSTREAMER-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>rusagetracer</refname>
+<refpurpose>log resource usage stats</refpurpose>
+</refnamediv>
+
+<anchor id="GstRUsageTracer"/><refsect1 id="gstreamer-plugins-rusagetracer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstRUsageTracer-struct">GstRUsageTracer</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gstreamer-plugins-rusagetracer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstTracer">GstTracer</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstRUsageTracer
+</screen>
+</refsect1>
+
+
+<refsect1 id="gstreamer-plugins-rusagetracer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A tracing module that take <link linkend="rusage"><function>rusage()</function></link> snapshots and logs them.</para>
+
+</refsect1>
+<refsect1 id="gstreamer-plugins-rusagetracer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gstreamer-plugins-rusagetracer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRUsageTracer-struct" role="struct">
+<title>struct GstRUsageTracer</title>
+<indexterm zone="GstRUsageTracer-struct"><primary>GstRUsageTracer</primary></indexterm>
+<programlisting language="C">struct GstRUsageTracer;</programlisting>
+<para>Opaque <link linkend="GstRUsageTracer"><type>GstRUsageTracer</type></link> data structure</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

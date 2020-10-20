@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.12">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-buffer-iterate-meta-filtered"><link linkend="gst-buffer-iterate-meta-filtered">gst_buffer_iterate_meta_filtered</link>, function in <link linkend="GstBuffer">GstBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="gst-debug-get-stack-trace"><link linkend="gst-debug-get-stack-trace">gst_debug_get_stack_trace</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="gst-pad-get-task-state"><link linkend="gst-pad-get-task-state">gst_pad_get_task_state</link>, function in <link linkend="GstPad">GstPad</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-print"><link linkend="gst-print">gst_print</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-printerr"><link linkend="gst-printerr">gst_printerr</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-printerrln"><link linkend="gst-printerrln">gst_printerrln</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-println"><link linkend="gst-println">gst_println</link>, function in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="GstStackTraceFlags"><link linkend="GstStackTraceFlags">GstStackTraceFlags</link>, enum in <link linkend="gstreamer-GstInfo">GstInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-structure-get-list"><link linkend="gst-structure-get-list">gst_structure_get_list</link>, function in <link linkend="GstStructure">GstStructure</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-structure-set-array"><link linkend="gst-structure-set-array">gst_structure_set_array</link>, function in <link linkend="GstStructure">GstStructure</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-structure-set-list"><link linkend="gst-structure-set-list">gst_structure_set_list</link>, function in <link linkend="GstStructure">GstStructure</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>U</title>
+<indexentry><primaryie linkends="gst-uri-get-media-fragment-table"><link linkend="gst-uri-get-media-fragment-table">gst_uri_get_media_fragment_table</link>, function in <link linkend="gstreamer-GstUri">GstUri</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-util-get-object-array"><link linkend="gst-util-get-object-array">gst_util_get_object_array</link>, function in <link linkend="gstreamer-GstUtils">GstUtils</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-util-set-object-array"><link linkend="gst-util-set-object-array">gst_util_set_object_array</link>, function in <link linkend="gstreamer-GstUtils">GstUtils</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

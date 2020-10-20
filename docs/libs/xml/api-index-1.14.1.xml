@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY hash "#">
+]>
+<indexdiv id="api-index-1.14.1">
+<indexdiv><title>A</title>
+<indexentry><primaryie linkends="gst-aggregator-pad-has-buffer"><link linkend="gst-aggregator-pad-has-buffer">gst_aggregator_pad_has_buffer</link>, function in <link linkend="GstAggregatorPad">GstAggregatorPad</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

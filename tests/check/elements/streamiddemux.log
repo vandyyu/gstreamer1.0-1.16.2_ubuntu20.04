@@ -1,0 +1,4 @@
+Running suite(s): streamiddemux
+100%: Checks: 6, Failures: 0, Errors: 0
+Check suite streamiddemux ran in 0.032s (tests failed: 0)
+PASS elements/streamiddemux (exit status: 0)

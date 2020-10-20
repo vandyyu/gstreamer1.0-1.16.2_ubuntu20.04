@@ -1,0 +1,4 @@
+Running suite(s): GstObject
+100%: Checks: 11, Failures: 0, Errors: 0
+Check suite gst_object ran in 0.168s (tests failed: 0)
+PASS gst/gstobject (exit status: 0)

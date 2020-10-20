@@ -1,0 +1,4 @@
+Running suite(s): selector
+100%: Checks: 9, Failures: 0, Errors: 0
+Check suite selector ran in 1.544s (tests failed: 0)
+PASS elements/selector (exit status: 0)

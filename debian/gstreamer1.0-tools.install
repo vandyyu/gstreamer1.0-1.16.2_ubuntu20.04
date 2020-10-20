@@ -1,0 +1,5 @@
+debian/tmp/usr/bin/gst-inspect-1.0
+debian/tmp/usr/bin/gst-launch-1.0
+debian/tmp/usr/bin/gst-typefind-1.0
+
+

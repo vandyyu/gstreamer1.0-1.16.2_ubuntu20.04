@@ -1,0 +1,4 @@
+Running suite(s): filesrc
+100%: Checks: 6, Failures: 0, Errors: 0
+Check suite filesrc ran in 0.022s (tests failed: 0)
+PASS elements/filesrc (exit status: 0)

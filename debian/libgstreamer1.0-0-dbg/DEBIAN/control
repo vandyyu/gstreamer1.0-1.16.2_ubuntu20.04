@@ -1,0 +1,23 @@
+Package: libgstreamer1.0-0-dbg
+Source: gstreamer1.0
+Version: 1.16.2-2
+Architecture: amd64
+Maintainer: Maintainers of GStreamer packages <gstreamer1.0@packages.debian.org>
+Installed-Size: 1123
+Depends: libgstreamer1.0-0 (= 1.16.2-2)
+Section: debug
+Priority: extra
+Multi-Arch: same
+Homepage: https://gstreamer.freedesktop.org
+Description: Core GStreamer libraries and elements
+ GStreamer is a streaming media framework, based on graphs of filters
+ which operate on media data.  Applications using this library can do
+ anything from real-time sound processing to playing videos, and just
+ about anything else media-related.  Its plugin-based architecture means
+ that new data types or processing capabilities can be added simply by
+ installing new plug-ins.
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat
+ easier to interpret core dumps. The libraries are installed in
+ /usr/lib/debug and are automatically used by gdb.

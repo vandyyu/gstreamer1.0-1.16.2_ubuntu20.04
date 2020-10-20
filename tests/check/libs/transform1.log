@@ -1,0 +1,4 @@
+Running suite(s): GstBaseTransform
+100%: Checks: 7, Failures: 0, Errors: 0
+Check suite gst_basetransform ran in 0.008s (tests failed: 0)
+PASS libs/transform1 (exit status: 0)
